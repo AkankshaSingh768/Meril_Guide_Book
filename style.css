@@ -280,7 +280,7 @@ h2 span{
     margin-top: 0rem;
     border-radius: 0;
     padding: 0rem;
-    margin-block: var(--outer-gap);
+    /* margin-block: var(--outer-gap); */
     height: var(--app-95vh);
     min-height: var(--app-95vh);
     max-height: var(--app-95vh);
