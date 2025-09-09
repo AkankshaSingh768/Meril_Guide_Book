@@ -112,6 +112,43 @@ h2 span{
   padding-bottom: clamp(2rem, 6vh, 3rem); /* avoid footer overlap on all screens */
 }
 
+/* Spacing between page-content and header */
+.page-content + .custom-header {
+  margin: 0.5rem 0;
+}
+
+/* Spacing between header and page-content */
+.custom-header + .page-content {
+  margin-top: 0.5rem;
+}
+
+/* Spacing between multiple page-content sections */
+.page-content + .page-content {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+/* Better spacing for mobile */
+@media (max-width: 768px) {
+  .page-content {
+    padding: 0.75rem;
+    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
+  }
+  
+  .page-content + .custom-header {
+    margin: 0.25rem 0;
+  }
+  
+  .custom-header + .page-content {
+    margin-top: 0.25rem;
+  }
+  
+  .page-content + .page-content {
+    margin-top: 0.25rem;
+    padding-top: 0.25rem;
+  }
+}
+
 /* Page number inside yellow bar */
 .footer-number-box {
   background-color:#F4B42A;
