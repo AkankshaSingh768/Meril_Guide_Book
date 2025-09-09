@@ -17,23 +17,14 @@
     <p>Buildup of fatty deposits in the arteries, leading to reduced blood flow.</p>
 
 
-    <div style="display: flex; position: relative; padding-bottom: 20px">
-      <img src="/pageImages/Vascular Intervention/Vascular Intervention-9.png" alt="Heart Diagram" style="
-          width:18vh;
-          height: auto;
-          position: absolute;
-          z-index: 0;
-          left:-3vh;
-          top:0.5vh;
-
-        " class="mbook" />
-
+    <div class="angioplasty-figure">
+      <img src="/pageImages/Vascular Intervention/Vascular Intervention-9.png" alt="Balloon Angioplasty" class="angioplasty-img" />
     </div>
  
 
 
   <!-- </div> -->
-  <h2 style="font-size: 1.11vh; font-weight: bold;margin-top: 78px;"> <span>B</span>alloon
+  <h2 style="font-size: 1.11vh; font-weight: bold;"> <span>B</span>alloon
     Angioplasty</h2>
   <p>A procedure where a balloon is inflated inside a narrowed artery to restore blood flow.</p>
 
@@ -89,6 +80,32 @@
     Lesion</h2>
   <p>A type of plaque in the arteries hardened by calcium buildup.</p>
 </div>
+
+<style>
+  /* Angled, overlapping image like the mock */
+  .angioplasty-figure {
+    position: relative;
+    height: clamp(120px, 14vh, 240px);
+    overflow: visible;
+  }
+  .angioplasty-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp(180px, 32vh, 320px);
+    height: auto;
+    /* Create a pointed right edge */
+    clip-path: polygon(0 0, 82% 0, 100% 50%, 82% 100%, 0 100%);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    transform: translateX(-0.4rem);
+  }
+
+  /* Tweak for small phones */
+  @media (max-width: 500px) {
+    .angioplasty-figure { height: clamp(110px, 14vh, 200px); }
+    .angioplasty-img { width: clamp(160px, 18vh, 280px); transform: translateX(-1.75rem); }
+  }
+</style>
 <div class="page-footer-bar">
   <div class="footer-number-box">07</div>
 </div>
