@@ -49,7 +49,7 @@ html, body {
   max-height: 100svh;
   max-width: 900px;
   margin-inline: auto;
-  /* margin-block: var(--outer-gap);  */
+  margin-block: clamp(8px, 2svh, 24px);
   /* padding: clamp(0.25rem, 1vw, 0.75rem); */
   overflow: hidden; /* no page scroll inside container */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -246,6 +246,7 @@ h2 span{
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
+    margin-block: clamp(8px, 2svh, 24px);
   }
 
   header, footer {
@@ -284,6 +285,7 @@ h2 span{
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
+    margin-block: clamp(8px, 2svh, 24px);
   }
 
   
@@ -322,7 +324,7 @@ h2 span{
     margin-top: 0rem;
     border-radius: 0;
     padding: 0rem;
-    margin-block: var(--outer-gap);
+    margin-block: clamp(8px, 2svh, 24px);
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
