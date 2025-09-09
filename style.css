@@ -440,8 +440,8 @@ h2 span{
 
 @media (max-width: 499px) {
   .footer-number-box {
-    padding: 0.6rem 0.8rem !important;
-    font-size: 0.9rem !important;
+    padding: 1rem 1.8rem !important;
+    font-size: 1.4rem !important;
   }
 }
 
