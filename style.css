@@ -44,9 +44,9 @@ html, body {
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  height: var(--app-90vh);
-  min-height: var(--app-90vh);
-  max-height: var(--app-90vh);
+  height: clamp(80svh, var(--app-90vh), 100svh);
+  min-height: clamp(80svh, var(--app-90vh), 100svh);
+  max-height: 100svh;
   max-width: 900px;
   margin-inline: auto;
   /* margin-block: var(--outer-gap);  */
@@ -243,9 +243,9 @@ h2 span{
     border-radius: 0;
     padding: 0rem;
     /* margin-top: 2rem; */
-    height: var(--app-90vh);
-    min-height: var(--app-90vh);
-    max-height: var(--app-90vh);
+    height: clamp(80svh, var(--app-90vh), 100svh);
+    min-height: clamp(80svh, var(--app-90vh), 100svh);
+    max-height: 100svh;
   }
 
   header, footer {
@@ -281,9 +281,9 @@ h2 span{
     border-radius: 0;
     padding: 0rem;
     /* margin-block: var(--outer-gap); */
-    height: var(--app-90vh);
-    min-height: var(--app-90vh);
-    max-height: var(--app-90vh);
+    height: clamp(80svh, var(--app-90vh), 100svh);
+    min-height: clamp(80svh, var(--app-90vh), 100svh);
+    max-height: 100svh;
   }
 
   
@@ -323,9 +323,9 @@ h2 span{
     border-radius: 0;
     padding: 0rem;
     margin-block: var(--outer-gap);
-    height: var(--app-90vh);
-    min-height: var(--app-90vh);
-    max-height: var(--app-90vh);
+    height: clamp(80svh, var(--app-90vh), 100svh);
+    min-height: clamp(80svh, var(--app-90vh), 100svh);
+    max-height: 100svh;
   }
 
   header, footer {
