@@ -247,6 +247,7 @@ h2 span{
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
     margin-block: clamp(8px, 2svh, 24px);
+    overflow: hidden; /* prevent scroll on phones */
   }
 
   header, footer {
@@ -257,7 +258,7 @@ h2 span{
   html, body { overflow: hidden; }
   #flipbook { aspect-ratio: auto; height: 100%; }
   .page { height: 100%; }
-  .page-content { padding-bottom: clamp(1.5rem, 5vh, 2.5rem); }
+  .page-content { padding-bottom: clamp(1.2rem, 4.5vh, 2rem); }
 
   .page p{
     font-size: clamp(0vh, 2.5vw, 1.2rem);
@@ -286,6 +287,7 @@ h2 span{
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
     margin-block: clamp(8px, 2svh, 24px);
+    overflow: auto;
   }
 
   
@@ -308,10 +310,10 @@ h2 span{
     line-height: 1.5;
     align-items: center;
   }
-  html, body { overflow: hidden; }
-  #flipbook { aspect-ratio: auto; height: 100%; }
-  .page { height: 100%; }
-  .page-content { padding-bottom: clamp(1.5rem, 5vh, 2.5rem); }
+  html, body { overflow: auto; padding-bottom: env(safe-area-inset-bottom); }
+  #flipbook { aspect-ratio: auto; height: auto; min-height: 100%; }
+  .page { height: auto; }
+  .page-content { padding-bottom: max(clamp(1.5rem, 5vh, 2.5rem), env(safe-area-inset-bottom)); overflow: visible; }
   h2 span{
   font-size: 1.5vh;margin-top: -0.3vh;
   color: #5B82B2;
@@ -328,6 +330,7 @@ h2 span{
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
+    overflow: auto;
   }
 
   header, footer {
@@ -349,10 +352,10 @@ h2 span{
     line-height: 1.5;
     align-items: center;
   }
-  html, body { overflow: hidden; }
-  #flipbook { aspect-ratio: auto; height: 100%; }
-  .page { height: 100%; }
-  .page-content { padding-bottom: clamp(1.5rem, 5vh, 2.5rem); }
+  html, body { overflow: auto; padding-bottom: env(safe-area-inset-bottom); }
+  #flipbook { aspect-ratio: auto; height: auto; min-height: 100%; }
+  .page { height: auto; }
+  .page-content { padding-bottom: max(clamp(1.5rem, 5vh, 2.5rem), env(safe-area-inset-bottom)); overflow: visible; }
   h2 span{
   font-size: 1.5vh;margin-top: -0.3vh;
   color: #5B82B2;
