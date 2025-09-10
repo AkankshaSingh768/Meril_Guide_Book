@@ -136,7 +136,7 @@ h2 span{
   }
   
   .page-content + .custom-header {
-    margin: 0.25rem 0;
+    margin: -1.19rem 0;
   }
   
   .custom-header + .page-content {
