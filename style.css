@@ -90,6 +90,10 @@ h2 span{
   font-size: 2vh;margin-top: -0.3vh;
   color: #5B82B2;
 }
+.span1{
+  padding-top: 12px;
+}
+
 
 
 /* Yellow footer bar at bottom */
@@ -232,6 +236,7 @@ h2 span{
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   /* line-height: 1; */
   margin: 0.2rem 0;
+  margin-top: 0px;
   display: flex;
   align-items: center;
   color: #3d3c3c;
@@ -261,19 +266,23 @@ h2 span{
 
   .page p{
     font-size: clamp(0vh, 2.5vw, 1.2rem);
-    margin-top: -0.2rem;
+    margin-top: -0.3rem;
   }
   .page h1, .page h2 {
     font-size: clamp(0.6rem, 2.5vw, 1.2rem);
     display: flex;
     line-height: 1;
     align-items: center;
+
     
   }
-  h2 span{
+  span{
   font-size: 2vh;margin-top: -0.3vh;
   color: #5B82B2;
+  
+  
 }
+
 }
 
 @media (max-width: 375px) {
@@ -304,9 +313,9 @@ h2 span{
     font-size: clamp(0.85rem, 4vw, 1rem);
   }
   .page h2 {
-    font-size: clamp(0.5rem, 1.5vw, 1rem);
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
     display: flex;
-    line-height: 1.5;
+    line-height:1;
     align-items: center;
   }
   html, body { overflow: hidden; }
