@@ -131,7 +131,7 @@ h2 span{
 /* Better spacing for mobile */
 @media (max-width: 768px) {
   .page-content {
-    padding: 0.75rem;
+    padding: 1.5rem;
     padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
   }
   
@@ -266,8 +266,9 @@ h2 span{
   .page h1, .page h2 {
     font-size: clamp(0.6rem, 2.5vw, 1.2rem);
     display: flex;
-    line-height: 1.5;
+    line-height: 1;
     align-items: center;
+    
   }
   h2 span{
   font-size: 2vh;margin-top: -0.3vh;
