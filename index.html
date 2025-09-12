@@ -17,6 +17,22 @@
       <!-- Flipbook Pages Will Be Injected Here -->
       <div id="flipbook"></div>
     </div>
+    <!-- Page Jump Box -->
+<div style="text-align:center; margin-top:15px;">
+  <input type="number" id="pageInput" placeholder="Enter page no." min="1" style="padding:6px; width:120px;">
+  <button onclick="goToPage()" style="padding:6px 12px; margin-left:5px;">Go</button>
+</div>
+
+<script>
+  function goToPage() {
+    let pageNumber = parseInt(document.getElementById("pageInput").value);
+    if (!isNaN(pageNumber)) {
+      $("#flipbook").turn("page", pageNumber); 
+    } else {
+      alert("Please enter a valid page number!");
+    }
+  }
+</script>
 
     <!-- JavaScript to load and initialize the book -->
     <script src="tts.js"></script>
