@@ -2953,7 +2953,7 @@ function addInlineTTSButton(element, text) {
 
 // ✅ Search for target phrases inside <h3> tags
 function injectSpeakButtonsForBoldTerms(container = document) {
-  const boldElements = Array.from(container.querySelectorAll("h2"));
+  const boldElements = Array.from(container.querySelectorAll("h2,strong"));
   boldElements.forEach((el) => {
     if (processedElements.has(el)) return;
     const text = cleanText(el.textContent);

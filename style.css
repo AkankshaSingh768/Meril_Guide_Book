@@ -241,7 +241,13 @@ h2 span{
   align-items: center;
   color: #3d3c3c;
 }
-
+.lable{
+  display: flex;
+  /* align-items:left; */
+  /* margin-left: 0px; */
+  color: black;
+  font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+}
 @media (max-width: 500px) {
   .main-container {
     max-width: 100%;
