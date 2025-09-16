@@ -157,7 +157,9 @@ h2 span{
 .footer-number-box {
   background-color:#F4B42A;
   color: #222;
-  padding: 0.8rem 1rem;
+  /* margin-right: 1rem; */
+  margin-top: -1rem;
+  padding: 1.1rem 1.5rem;
   /* font-weight: bold; */
   font-size: clamp(1rem, 1.5vw, 1.1rem);
   /* border-radius: 6px; */
@@ -495,7 +497,7 @@ h2 span{
 
 @media (max-width: 319px) {
   .footer-number-box {
-   
+    padding: 0.5rem 0.7rem !important;
     font-size: 0.8rem !important;
   }
 }
