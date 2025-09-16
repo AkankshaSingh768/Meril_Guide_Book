@@ -223,7 +223,7 @@ h2 span{
     grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
   }
   .left-section .icon {
-    height: clamp(2rem, 14vw, 3.6rem);
+    height: clamp(4rem, 14vw, 3.6rem);
   }
 }
 
