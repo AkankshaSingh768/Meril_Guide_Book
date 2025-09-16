@@ -208,13 +208,21 @@ h2 span{
 
 /* Right (RI SVG) */
 .right-section {
-  background-color: #5886C4; /* Blue box background */
-
+  height: clamp(70px, 10vw, 100px);
+  background-color: #5886C4; 
+  /* width:120px;Blue box background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
 }
 
 .ri-logo {
-  height: clamp(4.252rem, 8vw, 6rem);  /* 50px to 96px */
-  width: clamp(4rem, 6vw, 5rem);     /* 40px to 80px */
+  display: block;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
   padding: 1rem;
 }
 
