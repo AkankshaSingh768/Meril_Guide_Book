@@ -166,44 +166,65 @@ h2 span{
 
 
 .custom-header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* left icon | center text | right logo */
   align-items: center;
   background-color: #F4B42A; /* Yellow-orange background */
   color: #222;
   padding: 0rem;
   /* border-radius: 12px 12px 0 0; */
   height: clamp(70px, 10vw, 100px); /*responsive header height */
+  position: relative;
 }
 
 
 /* Left (Heart Icon) */
+.left-section {
+  display: flex;
+  align-items: center;
+  justify-self: right;
+}
 .left-section .icon {
-  height: clamp(5.125rem, 8vw, 6rem);
-  width: clamp(5rem, 6vw, 5rem);
-  padding: 1rem;
+  height: clamp(2.5rem, 20vw, 4.5rem);
+  width: auto;
+  max-height: 100%;
+  padding: clamp(0.5rem, 2vw, 1rem);
+  object-fit: contain;
 }
 
 
 /* Center (Text) */
 .center-section {
-  flex: 1;
+  /* center perfectly within the yellow middle column */
+  position: static;
+  transform: none;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
 }
 
 .title {
-  font-size: 1rem;
-  font-weight: 600;
-  
+  font-size: clamp(0.9rem, 2.2vw, 1.4rem);
+  font-weight: 700;
 }
 
 .subtitle {
-  font-size: 1rem;
-  margin-top: 0.2rem;
-  color: #333;
+  font-size: clamp(0.7rem, 1.8vw, 1.1rem);
+  margin-top: 0.1rem;
+  /* color: #333; */
+}
+
+/* Ensure perfect centering on very small phones */
+@media (max-width: 500px) {
+  .custom-header {
+    grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
+  }
+  .left-section .icon {
+    height: clamp(2rem, 14vw, 3.6rem);
+  }
 }
 
 /* Right (RI SVG) */
@@ -215,6 +236,7 @@ h2 span{
   align-items: center;
   justify-content: center;
   padding: 0 0.5rem;
+  justify-self: end;
 }
 
 .ri-logo {
