@@ -213,7 +213,7 @@ h2 span{
 }
 
 .ri-logo {
-  height: clamp(4.125rem, 8vw, 6rem);  /* 50px to 96px */
+  height: clamp(4.252rem, 8vw, 6rem);  /* 50px to 96px */
   width: clamp(4rem, 6vw, 5rem);     /* 40px to 80px */
   padding: 1rem;
 }
