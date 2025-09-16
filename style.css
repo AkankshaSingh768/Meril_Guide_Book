@@ -477,21 +477,21 @@ h2 span{
 @media (min-width: 768px) and (max-width: 1399px) {
   .footer-number-box {
    
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
 }
 
 @media (max-width: 767px) {
   .footer-number-box {
     
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
 }
 
 @media (max-width: 499px) {
   .footer-number-box {
     
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
   }
 }
 
