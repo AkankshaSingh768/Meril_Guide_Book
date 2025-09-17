@@ -17,23 +17,14 @@
     <p>Buildup of fatty deposits in the arteries, leading to reduced blood flow.</p>
 
 
-    <div style="display: flex; position: relative; padding-bottom: 20px">
-      <img src="/pageImages/Vascular Intervention/Vascular Intervention-9.png" alt="Heart Diagram" style="
-          width:115%;
-          height: auto;
-          position: absolute;
-          z-index: 0;
-          left:-16px;
-          top:-19px;
-
-        " class="mbook" />
-
+    <div class="angioplasty-figure">
+      <img src="/pageImages/Vascular Intervention/Vascular_Intervention-9-removebg-preview.png" alt="Balloon Angioplasty" class="angioplasty-img" />
     </div>
  
 
 
   <!-- </div> -->
-  <h2 style="font-size: 1.11vh; font-weight: bold;margin-top: 78px;"> <span>B</span>alloon
+  <h2 class="span1"> <span>B</span>alloon
     Angioplasty</h2>
   <p>A procedure where a balloon is inflated inside a narrowed artery to restore blood flow.</p>
 
@@ -47,11 +38,12 @@
   <p>The ability of a balloon to expand to a specified diameter under pressure.</p>
 
   <h2 >Balloon Crossing Profile</h2>
-  <p>The ability of a balloon to pass through narrow or obstructed vessels.</p>
+  <p>The ability of a balloon to pass </p>
 </div>
 
 <!-- Right Column -->
 <div style="width: 50%">
+  <p>through narrow or obstructed vessels.</p>
   <h2 >Balloon Deflation</h2>
   <p>Collapsing and removing the balloon catheter after treatment.</p>
 
@@ -85,13 +77,44 @@
   <h2 >Biodegradable Polymer</h2>
   <p>A polymer used in stents that breaks down naturally over time.</p>
 
-  <h2 ><span style="color: #5b82b2; font-size: 1.4vh">C</span>alcified
+  <h2 class="span1" ><span>C</span>alcified
     Lesion</h2>
   <p>A type of plaque in the arteries hardened by calcium buildup.</p>
 </div>
+
+<style>
+  /* Angled, overlapping image like the mock */
+  .angioplasty-figure {
+    position: relative;
+    height: clamp(120px, 14vh, 240px);
+    overflow: visible;
+  }
+  .angioplasty-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp(180px, 32vh, 320px);
+    height: auto;
+    /* Create a pointed right edge */
+    clip-path: polygon(0 0, 82% 0, 100% 50%, 82% 100%, 0 100%);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    transform: translateX(-0.4rem);
+  }
+
+  /* Tweak for small phones */
+  @media (max-width: 500px) {
+    .angioplasty-figure { height: clamp(110px, 10vh, 200px); }
+    .angioplasty-img { width: clamp(2vh, 17vh, 280px); transform: translateX(-0.75rem); }
+  }
+  @media(max-width:375px){
+     .angioplasty-figure { height: clamp(90px, 10vh, 200px); }
+   
+  }
+</style>
+
+
+
+</div>
 <div class="page-footer-bar">
   <div class="footer-number-box">07</div>
-</div>
-
-
 </div>
