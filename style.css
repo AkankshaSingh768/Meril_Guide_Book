@@ -91,7 +91,7 @@ h2 span{
   color: #5B82B2;
 }
 .span1{
-  padding-top: 12px;
+  padding-top:1vh;
 }
 
 
@@ -268,7 +268,7 @@ h2 span{
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   /* line-height: 1; */
   margin: 0.2rem 0;
-  margin-top: 0px;
+  margin-top: 0.5vh;
   display: flex;
   align-items: center;
   color: #3d3c3c;
