@@ -13,9 +13,19 @@ body {
   font-family: "Carlito", Arial, sans-serif;
 
   background-color: grey;
-  overflow: hidden;
   overflow-x: hidden;
+  overflow-y: auto;
 }
+/* Fluid typography variables */
+:root {
+  --font-size-base: clamp(14px, 1.6vw, 18px);
+  --font-size-p: clamp(0.7rem, 1.2vw, 1.15rem);
+  --font-size-h1: clamp(1rem, 2.4vw, 1.75rem);
+  --font-size-h2: clamp(0.6rem, 2.0vw, 1.5rem);
+  --font-size-subtitle: clamp(0.85rem, 1.6vw, 1.25rem);
+}
+
+html { font-size: var(--font-size-base); }
 /* Reliable 90vh variable: prefer 90dvh, fall back to 90svh */
 :root {
   --app-90vh: 90svh;
@@ -84,10 +94,10 @@ body {
   display: block;
 }
 img.responsive-image {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  /* object-fit: contain; */
+  object-fit: contain;
 }
 @supports (padding: max(0px)) {
   body {
@@ -217,12 +227,12 @@ h2 span {
 }
 
 .title {
-  font-size: clamp(0.9rem, 2.2vw, 1.4rem);
+  font-size: var(--font-size-h1);
   font-weight: 700;
 }
 
 .subtitle {
-  font-size: clamp(0.7rem, 1.8vw, 1.1rem);
+  font-size: var(--font-size-subtitle);
   margin-top: 0.1rem;
   /* color: #333; */
 }
@@ -265,14 +275,14 @@ h2 span {
 }
 
 .page p {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: var(--font-size-p);
   line-height: 1.2;
   margin: 0rem 0;
   color: #3d3c3c;
 }
 .page h1,
 .page h2 {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: var(--font-size-h2);
   /* line-height: 1; */
   margin: 0.2rem 0;
   margin-top: 0.3vh;
@@ -307,7 +317,8 @@ h2 span {
 
   html,
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   #flipbook {
     aspect-ratio: auto;
@@ -320,17 +331,9 @@ h2 span {
     padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
   }
 
-  .page p {
-    font-size: clamp(0vh, 2.5vw, 1.2rem);
-    margin-top: -0.2rem;
-  }
+  .page p { font-size: var(--font-size-p); }
   .page h1,
-  .page h2 {
-    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
-    display: flex;
-    line-height: 1;
-    align-items: center;
-  }
+  .page h2 { font-size: var(--font-size-h2); line-height: 1.1; }
   span {
     font-size: 2vh;
     margin-top: -0.3vh;
@@ -358,22 +361,13 @@ h2 span {
     padding: 0rem;
   }
 
-  .page p {
-    font-size: clamp(0.6rem, 0vw, 1rem);
-    margin-top: -0.2rem;
-  }
-  .page h1 {
-    font-size: clamp(0.85rem, 4vw, 1rem);
-  }
-  .page h2 {
-    font-size: clamp(0.6rem, 1.5vw, 1rem);
-    display: flex;
-    line-height: 1;
-    align-items: center;
-  }
+  .page p { font-size: var(--font-size-p); }
+  .page h1 { font-size: var(--font-size-h1); }
+  .page h2 { font-size: var(--font-size-h2); line-height: 1.1; }
   html,
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   #flipbook {
     aspect-ratio: auto;
@@ -411,22 +405,13 @@ h2 span {
     padding: 0rem;
   }
 
-  .page p {
-    font-size: clamp(0.6rem, 0vw, 1rem);
-    margin-top: -0.2rem;
-  }
-  .page h1 {
-    font-size: clamp(0.85rem, 4vw, 1rem);
-  }
-  .page h2 {
-    font-size: clamp(0.5rem, 1.5vw, 1rem);
-    display: flex;
-    line-height: 1.5;
-    align-items: center;
-  }
+  .page p { font-size: var(--font-size-p); }
+  .page h1 { font-size: var(--font-size-h1); }
+  .page h2 { font-size: var(--font-size-h2); line-height: 1.2; }
   html,
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   #flipbook {
     aspect-ratio: auto;
