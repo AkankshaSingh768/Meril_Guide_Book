@@ -2,28 +2,37 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   /* font-family: sans-serif;
    */
   /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    /* font-family: Calibri, "Helvetica Neue", Arial, sans-serif; */
-     font-family: 'Carlito', Arial, sans-serif;
+  /* font-family: Calibri, "Helvetica Neue", Arial, sans-serif; */
+  font-family: "Carlito", Arial, sans-serif;
 
   background-color: grey;
   overflow: hidden;
   overflow-x: hidden;
 }
 /* Reliable 90vh variable: prefer 90dvh, fall back to 90svh */
-:root { --app-90vh: 90svh; }
+:root {
+  --app-90vh: 90svh;
+}
 @supports (height: 90dvh) {
-  :root { --app-90vh: 90dvh; }
+  :root {
+    --app-90vh: 90dvh;
+  }
 }
 /* Responsive outer spacing (top/bottom) capped so no scroll occurs */
-:root { --outer-gap: min(5svh, clamp(2rem, 2vh, 1.5rem)); }
+:root {
+  --outer-gap: min(5svh, clamp(2rem, 2vh, 1.5rem));
+}
 @supports (height: 90dvh) {
-  :root { --outer-gap: min(5dvh, clamp(2rem, 2vh, 1.5rem)); }
+  :root {
+    --outer-gap: min(5dvh, clamp(2rem, 2vh, 1.5rem));
+  }
 }
 /* #flipbook .page {
   background-color: white;
@@ -33,11 +42,11 @@ html, body {
 #flipbook {
   width: 900px;
    /* width: 100%; */
-  /* aspect-ratio: 16 / 9; */
-  /* height: 600px; */
-  /* z-index: 10; */
-  /* background-color: white; */
-/* } */ 
+/* aspect-ratio: 16 / 9; */
+/* height: 600px; */
+/* z-index: 10; */
+/* background-color: white; */
+/* } */
 
 .main-container {
   display: flex;
@@ -72,7 +81,7 @@ html, body {
   height: auto;
   max-height: 100%;
   /* object-fit: contain; */
-  display: block; 
+  display: block;
 }
 img.responsive-image {
   width: 100vw;
@@ -80,21 +89,20 @@ img.responsive-image {
   max-width: 100%;
   /* object-fit: contain; */
 }
-@supports(padding: max(0px)) {
+@supports (padding: max(0px)) {
   body {
     padding: env(safe-area-inset);
   }
 }
 
-h2 span{
-  font-size: 2.5vh;margin-top: -0.8vh;
-  color: #5B82B2;
+h2 span {
+  font-size: 2.5vh;
+  margin-top: -0.8vh;
+  color: #5b82b2;
 }
-.span1{
-  padding-top:1vh;
+.span1 {
+  padding-top: 1vh;
 }
-
-
 
 /* Yellow footer bar at bottom */
 .page-footer-bar {
@@ -113,7 +121,11 @@ h2 span{
 }
 .page-content {
   padding: clamp(1rem, 1.2vw, 1rem);
-  padding-bottom: clamp(2rem, 6vh, 3rem); /* avoid footer overlap on all screens */
+  padding-bottom: clamp(
+    2rem,
+    6vh,
+    3rem
+  ); /* avoid footer overlap on all screens */
 }
 
 /* Spacing between page-content and header */
@@ -138,15 +150,15 @@ h2 span{
     padding: 0.75rem;
     padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
   }
-  
+
   .page-content + .custom-header {
     margin: -1.3rem 0;
   }
-  
+
   .custom-header + .page-content {
     margin-top: 0.25rem;
   }
-  
+
   .page-content + .page-content {
     margin-top: 0.25rem;
     padding-top: 0.25rem;
@@ -155,7 +167,7 @@ h2 span{
 
 /* Page number inside yellow bar */
 .footer-number-box {
-  background-color:#F4B42A;
+  background-color: #f4b42a;
   color: #222;
   /* margin-right: 1rem; */
   margin-top: -1rem;
@@ -165,20 +177,17 @@ h2 span{
   /* border-radius: 6px; */
 }
 
-
-
 .custom-header {
   display: grid;
   grid-template-columns: auto 1fr auto; /* left icon | center text | right logo */
   align-items: center;
-  background-color: #F4B42A; /* Yellow-orange background */
+  background-color: #f4b42a; /* Yellow-orange background */
   color: #222;
   padding: 0rem;
   /* border-radius: 12px 12px 0 0; */
   height: clamp(70px, 10vw, 100px); /*responsive header height */
   position: relative;
 }
-
 
 /* Left (Heart Icon) */
 .left-section {
@@ -194,7 +203,6 @@ h2 span{
   object-fit: contain;
 }
 
-
 /* Center (Text) */
 .center-section {
   /* center perfectly within the yellow middle column */
@@ -204,7 +212,7 @@ h2 span{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:right;
+  align-items: right;
   gap: 0.1rem;
 }
 
@@ -232,7 +240,7 @@ h2 span{
 /* Right (RI SVG) */
 .right-section {
   height: clamp(70px, 10vw, 100px);
-  background-color: #5886C4; 
+  background-color: #5886c4;
   /* width:120px;Blue box background */
   display: flex;
   align-items: center;
@@ -250,21 +258,20 @@ h2 span{
   padding: 1rem;
 }
 
-
-
 #flipbook {
   width: 100%;
   aspect-ratio: 16 / 9;
   height: 100%;
 }
 
-.page p{
+.page p {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   line-height: 1.2;
   margin: 0rem 0;
   color: #3d3c3c;
 }
-.page h1, .page h2 {
+.page h1,
+.page h2 {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   /* line-height: 1; */
   margin: 0.2rem 0;
@@ -273,7 +280,7 @@ h2 span{
   align-items: center;
   color: #3d3c3c;
 }
-.lable{
+.lable {
   display: flex;
   /* align-items:left; */
   /* margin-left: 0px; */
@@ -292,35 +299,43 @@ h2 span{
     margin-block: clamp(8px, 2svh, 24px);
   }
 
-  header, footer {
+  header,
+  footer {
     font-size: 1rem;
     padding: 0rem;
   }
 
-  html, body { overflow: hidden; }
-  #flipbook { aspect-ratio: auto; height: 100%; }
-  .page { height: 100%; }
-  .page-content { padding-bottom: clamp(1.5rem, 5vh, 2.5rem); }
+  html,
+  body {
+    overflow: hidden;
+  }
+  #flipbook {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .page {
+    height: 100%;
+  }
+  .page-content {
+    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
+  }
 
-  .page p{
+  .page p {
     font-size: clamp(0vh, 2.5vw, 1.2rem);
     margin-top: -0.2rem;
   }
-  .page h1, .page h2 {
+  .page h1,
+  .page h2 {
     font-size: clamp(0.6rem, 2.5vw, 1.2rem);
     display: flex;
     line-height: 1;
     align-items: center;
-
-    
   }
-  span{
-  font-size: 2vh;margin-top: -0.3vh;
-  color: #5B82B2;
-  
-  
-}
-
+  span {
+    font-size: 2vh;
+    margin-top: -0.3vh;
+    color: #5b82b2;
+  }
 }
 
 @media (max-width: 375px) {
@@ -336,34 +351,45 @@ h2 span{
     margin-block: clamp(8px, 2svh, 24px);
   }
 
-  
-  header, footer {
+  header,
+  footer {
     /* font-size: 0.95rem; */
     font-size: clamp(0rem, 3.5vw, 1.2rem);
     padding: 0rem;
   }
 
-  .page p{
+  .page p {
     font-size: clamp(0.6rem, 0vw, 1rem);
     margin-top: -0.2rem;
   }
-  .page h1{
+  .page h1 {
     font-size: clamp(0.85rem, 4vw, 1rem);
   }
   .page h2 {
     font-size: clamp(0.6rem, 1.5vw, 1rem);
     display: flex;
-    line-height:1;
+    line-height: 1;
     align-items: center;
   }
-  html, body { overflow: hidden; }
-  #flipbook { aspect-ratio: auto; height: 100%; }
-  .page { height: 100%; }
-  .page-content { padding-bottom: clamp(1.5rem, 5vh, 2.5rem); }
-  h2 span{
-  font-size: 2.5vh;margin-top: -0.8vh;
-  color: #5B82B2;
-}
+  html,
+  body {
+    overflow: hidden;
+  }
+  #flipbook {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .page {
+    height: 100%;
+  }
+  .page-content {
+    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
+  }
+  h2 span {
+    font-size: 2.5vh;
+    margin-top: -0.8vh;
+    color: #5b82b2;
+  }
 }
 
 @media (max-width: 320px) {
@@ -378,17 +404,18 @@ h2 span{
     max-height: 100svh;
   }
 
-  header, footer {
+  header,
+  footer {
     /* font-size: 0.95rem; */
     font-size: clamp(0rem, 3.5vw, 1.2rem);
     padding: 0rem;
   }
 
-  .page p{
+  .page p {
     font-size: clamp(0.6rem, 0vw, 1rem);
     margin-top: -0.2rem;
   }
-  .page h1{
+  .page h1 {
     font-size: clamp(0.85rem, 4vw, 1rem);
   }
   .page h2 {
@@ -397,30 +424,37 @@ h2 span{
     line-height: 1.5;
     align-items: center;
   }
-  html, body { overflow: hidden; }
-  #flipbook { aspect-ratio: auto; height: 100%; }
-  .page { height: 100%; }
-  .page-content { padding-bottom: clamp(1.5rem, 5vh, 2.5rem); }
-  h2 span{
-  font-size: 2.5vh;margin-top: -0.8vh;
-  color: #5B82B2;
+  html,
+  body {
+    overflow: hidden;
+  }
+  #flipbook {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .page {
+    height: 100%;
+  }
+  .page-content {
+    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
+  }
+  h2 span {
+    font-size: 2.5vh;
+    margin-top: -0.8vh;
+    color: #5b82b2;
+  }
 }
-}
-
-
 
 /* Fix layout for Galaxy S8, S20 Ultra (portrait) */
-@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3)
-       {
+@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
   .main-container {
-    height: auto;    /* let it grow instead of being fixed at 80vh */
+    height: auto; /* let it grow instead of being fixed at 80vh */
     margin-block: 1rem;
     padding: 0.5rem;
-
   }
 
   #flipbook {
-    aspect-ratio: auto;  /* allow automatic height */
+    aspect-ratio: auto; /* allow automatic height */
     height: auto;
   }
 
@@ -430,14 +464,15 @@ h2 span{
   }
 
   img.responsive-image {
-    width: 100%;        /* scale to container width properly */
+    width: 100%; /* scale to container width properly */
     height: auto;
     max-height: 80vh;
   }
-  h2 span{
-  font-size: 2.5vh;margin-top: -0.8vh;
-  color: #5B82B2;
-}
+  h2 span {
+    font-size: 2.5vh;
+    margin-top: -0.8vh;
+    color: #5b82b2;
+  }
 }
 
 /* @media only screen and (max-width: 430px) and (min-device-width: 320px) {
@@ -469,28 +504,24 @@ h2 span{
 /* Responsive footer number box */
 @media (min-width: 1400px) {
   .footer-number-box {
-    
     font-size: 1.2rem !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1399px) {
   .footer-number-box {
-   
     font-size: 1.2rem !important;
   }
 }
 
 @media (max-width: 767px) {
   .footer-number-box {
-    
     font-size: 1.2rem !important;
   }
 }
 
 @media (max-width: 499px) {
   .footer-number-box {
-    
     font-size: 1.1rem !important;
   }
 }
@@ -498,7 +529,6 @@ h2 span{
 @media (max-width: 319px) {
   .footer-number-box {
     padding: 0.5rem 0.7rem !important;
-    font-size:1rem !important;
+    font-size: 1rem !important;
   }
 }
-
