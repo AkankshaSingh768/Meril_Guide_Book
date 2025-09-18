@@ -21,7 +21,7 @@ body {
   --font-size-base: clamp(14px, 1.6vw, 18px);
   --font-size-p: clamp(0.7rem, 1.2vw, 1.15rem);
   --font-size-h1: clamp(1rem, 2.4vw, 1.75rem);
-  --font-size-h2: clamp(0.6rem, 2.0vw, 1.5rem);
+  --font-size-h2: clamp(0.10rem, 3.0vw, 1.5rem);
   --font-size-subtitle: clamp(0.85rem, 1.6vw, 1.25rem);
 }
 
