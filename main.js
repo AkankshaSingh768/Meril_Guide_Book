@@ -162,30 +162,30 @@ $(document).ready(function () {
   }
 
 
-  $("#flipbook").turn({
-    width: '100%',
-    height: '100%',
-    autoCenter: true,
-    display: $(window).width() < 1024 ? "single" : "double",
-    duration: 1000,
-    acceleration: true
-  });
-  
-  // Update on window resize
-  $(window).on("resize", function() {
-    $("#flipbook").turn("display", $(window).width() < 1024 ? "single" : "double");
-  });
-  
-
-  // Initialize flipbook
-  // $('#flipbook').turn({
+  // $("#flipbook").turn({
   //   width: '100%',
   //   height: '100%',
   //   autoCenter: true,
-  //   display: 'single',
+  //   display: $(window).width() < 1024 ? "single" : "double",
   //   duration: 1000,
   //   acceleration: true
   // });
+  
+  // // Update on window resize
+  // $(window).on("resize", function() {
+  //   $("#flipbook").turn("display", $(window).width() < 1024 ? "single" : "double");
+  // });
+  
+
+  // Initialize flipbook
+  $('#flipbook').turn({
+    width: '100%',
+    height: '100%',
+    autoCenter: true,
+    display: 'single',
+    duration: 1000,
+    acceleration: true
+  });
 
   // Optional: Initialize TTS if defined
   if (typeof initializeTTS === "function") {
