@@ -588,6 +588,7 @@ h2 span {
     font-size: clamp(1rem, 2.5vw, 3.2rem);
     display: flex;
     line-height: 2;
+    margin-top: -1rem;
     align-items: center;
   }
   span {
