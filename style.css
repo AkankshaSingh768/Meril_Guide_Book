@@ -380,6 +380,7 @@ h2 span {
     font-size: clamp(0.6rem, 1.5vw, 1rem);
     display: flex;
     line-height: 1;
+    margin-top: 0.5vh;
     align-items: center;
   }
   html,
