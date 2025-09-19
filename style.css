@@ -580,12 +580,12 @@ h2 span {
   }
 
   .page p {
-    font-size: clamp(0vh, 2.5vw, 1.2rem);
-    margin-top: -0.2rem;
+    font-size: clamp(0vh,2.5vw, 1.2rem);
+    margin-top: -0.5rem;
   }
   .page h1,
   .page h2 {
-    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+    font-size: clamp(1rem, 2.5vw, 3.2rem);
     display: flex;
     line-height: 2;
     align-items: center;
