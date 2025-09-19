@@ -19,9 +19,9 @@ body {
 /* Fluid typography variables */
 :root {
   --font-size-base: clamp(14px, 1.6vw, 18px);
-  --font-size-p: clamp(0.7rem, 1.2vw, 1.15rem);
-  --font-size-h1: clamp(1rem, 2.4vw, 1.75rem);
-  --font-size-h2: clamp(0.10rem, 3.0vw, 1.5rem);
+  --font-size-p: clamp(0.95rem, 1.2vw, 1.15rem);
+  --font-size-h1: clamp(1.15rem, 2.4vw, 1.75rem);
+  --font-size-h2: clamp(1rem, 2.0vw, 1.5rem);
   --font-size-subtitle: clamp(0.85rem, 1.6vw, 1.25rem);
 }
 
@@ -331,9 +331,17 @@ h2 span {
     padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
   }
 
-  .page p { font-size: var(--font-size-p); }
+  .page p {
+    font-size: clamp(0vh, 2.5vw, 1.2rem);
+    margin-top: -0.2rem;
+  }
   .page h1,
-  .page h2 { font-size: var(--font-size-h2); line-height: 1.1; }
+  .page h2 {
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+    display: flex;
+    line-height: 1;
+    align-items: center;
+  }
   span {
     font-size: 2vh;
     margin-top: -0.3vh;
@@ -361,9 +369,19 @@ h2 span {
     padding: 0rem;
   }
 
-  .page p { font-size: var(--font-size-p); }
-  .page h1 { font-size: var(--font-size-h1); }
-  .page h2 { font-size: var(--font-size-h2); line-height: 1.1; }
+  .page p {
+    font-size: clamp(0.6rem, 0vw, 1rem);
+    margin-top: -0.2rem;
+  }
+  .page h1 {
+    font-size: clamp(0.85rem, 4vw, 1rem);
+  }
+  .page h2 {
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    display: flex;
+    line-height: 1;
+    align-items: center;
+  }
   html,
   body {
     overflow-x: hidden;
@@ -405,9 +423,19 @@ h2 span {
     padding: 0rem;
   }
 
-  .page p { font-size: var(--font-size-p); }
-  .page h1 { font-size: var(--font-size-h1); }
-  .page h2 { font-size: var(--font-size-h2); line-height: 1.2; }
+  .page p {
+    font-size: clamp(0.6rem, 0vw, 1rem);
+    margin-top: -0.2rem;
+  }
+  .page h1 {
+    font-size: clamp(0.85rem, 4vw, 1rem);
+  }
+  .page h2 {
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
+    display: flex;
+    line-height: 1.5;
+    align-items: center;
+  }
   html,
   body {
     overflow-x: hidden;
