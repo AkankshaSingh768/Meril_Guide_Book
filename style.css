@@ -587,8 +587,8 @@ h2 span {
   }
 
   .page p {
-    font-size: clamp(0vh,2.7vw, 1.2rem);
-    margin-top: -0.3rem;
+    font-size: clamp(0vh,2.8vw, 1.2rem);
+    margin-top: -0.2rem;
   color: #3d3c3c;
 
   }
@@ -596,7 +596,7 @@ h2 span {
   .page h2 {
     font-size: clamp(0.6rem, 3vw, 3.2rem);
     display: flex;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     margin-top: 0.3rem;
     align-items: center;
   }
