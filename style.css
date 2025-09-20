@@ -552,7 +552,7 @@ h2 span {
 /* } */
 
 /* Exact match for 720 × 1600 */
-@media (min-width: 540px) and (max-width:840px) {
+@media (min-width: 395px) and (max-height:812px) {
   /* Your styles here */
    .main-container {
     max-width: 100%;
@@ -667,7 +667,7 @@ h2 span {
 
 
 /* Exact match for 720 × 1600 */
-@media (min-width: 1180px) and (max-width: 1300px) {
+@media (min-height: 1180px) and (max-height: 1300px) {
   /* Your styles here */
    .main-container {
     max-width: 100%;
