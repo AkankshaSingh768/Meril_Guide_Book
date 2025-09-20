@@ -341,7 +341,7 @@ h2 span {
   }
 }
 
-@media (max-width: 375px) and (max-width:390px) {
+@media (min-width: 375px) and (max-width:390px) {
   .main-container {
     max-width: 100%;
     margin-top: 0rem;
@@ -371,7 +371,7 @@ h2 span {
     font-size: clamp(0.85rem, 4vw, 1rem);
   }
   .page h2 {
-    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    font-size: clamp(0.6rem, 4.5vw, 1rem);
     display: flex;
     line-height: 1;
     align-items: center;
