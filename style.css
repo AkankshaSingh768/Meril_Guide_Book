@@ -341,7 +341,7 @@ h2 span {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 375px) and (max-width:390px) {
   .main-container {
     max-width: 100%;
     margin-top: 0rem;
@@ -552,7 +552,7 @@ h2 span {
 /* } */
 
 /* Exact match for 720 × 1600 */
-@media (max-width: 395px){
+@media only screen and (max-width: 395px){
   /* Your styles here */
    .main-container {
     max-width: 100%;
