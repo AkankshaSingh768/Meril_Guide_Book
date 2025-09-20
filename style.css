@@ -470,35 +470,6 @@ h2 span {
   }
 }
 
-/* Galaxy S8, S20 Ultra specific (360px and below with high DPI) */
-@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
-  .main-container {
-    height: auto; /* let it grow instead of being fixed at 80vh */
-    margin-block: 1rem;
-    padding: 0.5rem;
-  }
-
-  #flipbook {
-    aspect-ratio: auto; /* allow automatic height */
-    height: auto;
-  }
-
-  .page {
-    height: auto;
-    padding: 1rem 0.5rem;
-  }
-
-  img.responsive-image {
-    width: 100%; /* scale to container width properly */
-    height: auto;
-    max-height: 80vh;
-  }
-  h2 span {
-    font-size: 2.5vh;
-    margin-top: -0.8vh;
-    color: #5b82b2;
-  }
-}
 
 /* Very small phones (375px and below) */
 @media (min-width: 375px) and (max-width:390px) {
@@ -556,6 +527,38 @@ h2 span {
     color: #5b82b2;
   }
 }
+
+
+/* Galaxy S8, S20 Ultra specific (360px and below with high DPI) */
+@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
+  .main-container {
+    height: auto; /* let it grow instead of being fixed at 80vh */
+    margin-block: 1rem;
+    padding: 0.5rem;
+  }
+
+  #flipbook {
+    aspect-ratio: auto; /* allow automatic height */
+    height: auto;
+  }
+
+  .page {
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  img.responsive-image {
+    width: 100%; /* scale to container width properly */
+    height: auto;
+    max-height: 80vh;
+  }
+  h2 span {
+    font-size: 2.5vh;
+    margin-top: -0.8vh;
+    color: #5b82b2;
+  }
+}
+
 
 /* Extra small phones (320px and below) */
 @media (max-width: 320px) {
