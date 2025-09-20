@@ -345,50 +345,6 @@ h2 span {
   }
 }
 
-/* iPhone specific fixes - Very specific detection (430px and below) */
-@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) and (-webkit-touch-callout: none) {
-  .page p {
-    font-size: clamp(0.9rem, 3.2vw, 1.5rem) !important;
-    line-height: 1.5 !important;
-    margin: 0.4rem 0 !important;
-    color: #3d3c3c !important;
-  }
-  
-  .page h1,
-  .page h2 {
-    font-size: clamp(1rem, 3.8vw, 1.8rem) !important;
-    line-height: 1.4 !important;
-    margin: 0.4rem 0 !important;
-    margin-top: 0.5vh !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-  
-  .lable {
-    font-size: clamp(0.8rem, 3.2vw, 1.4rem) !important;
-    color: black !important;
-  }
-  
-  .page-content {
-    padding: 1.2rem !important;
-    padding-bottom: clamp(2.5rem, 7vh, 3.5rem) !important;
-  }
-  
-  .main-container {
-    margin-block: clamp(15px, 4svh, 30px) !important;
-  }
-  
-  h2 span {
-    font-size: 3vh !important;
-    margin-top: -0.4vh !important;
-    color: #5b82b2 !important;
-  }
-  
-  .span1 {
-    padding-top: 1.2vh !important;
-  }
-}
-
 /* Small phones (500px and below) */
 @media (max-width: 500px) {
   .custom-header {
@@ -402,6 +358,7 @@ h2 span {
     max-width: 100%;
     border-radius: 0;
     padding: 0rem;
+    /* margin-top: 2rem; */
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
@@ -432,15 +389,16 @@ h2 span {
   .page p {
     font-size: clamp(0vh, 2vw, 1.2rem);
     margin-top: -0.2rem;
-    color: #3d3c3c;
+  color: #3d3c3c;
+
   }
   .page h1,
   .page h2 {
     font-size: clamp(0.6rem, 2vw, 1.2rem);
     display: flex;
     line-height: 1;
-    margin: 0.1rem 0;
-    margin-top: 0.2vh;
+     margin: 0.1rem 0;
+  margin-top: 0.2vh;
     align-items: center;
   }
   span {
@@ -463,6 +421,7 @@ h2 span {
     max-width: 100%;
     border-radius: 0;
     padding: 0rem;
+    /* margin-top: 2rem; */
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
@@ -491,14 +450,16 @@ h2 span {
   }
 
   .page p {
-    font-size: clamp(0vh, 2.8vw, 1.2rem);
+    font-size: clamp(0vh,2.8vw, 1.2rem);
     margin-top: -0.1rem;
-    color: #3d3c3c;
+  color: #3d3c3c;
+
   }
   .page h1,
   .page h2 {
     font-size: clamp(0.3rem, 3vw, 3.2rem);
     display: flex;
+    /* line-height: 1.5; */
     margin-top: 0.3rem;
     align-items: center;
   }
@@ -512,13 +473,13 @@ h2 span {
 /* Galaxy S8, S20 Ultra specific (360px and below with high DPI) */
 @media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
   .main-container {
-    height: auto;
+    height: auto; /* let it grow instead of being fixed at 80vh */
     margin-block: 1rem;
     padding: 0.5rem;
   }
 
   #flipbook {
-    aspect-ratio: auto;
+    aspect-ratio: auto; /* allow automatic height */
     height: auto;
   }
 
@@ -528,7 +489,7 @@ h2 span {
   }
 
   img.responsive-image {
-    width: 100%;
+    width: 100%; /* scale to container width properly */
     height: auto;
     max-height: 80vh;
   }
@@ -540,12 +501,13 @@ h2 span {
 }
 
 /* Very small phones (375px and below) */
-@media (max-width: 375px) {
+@media (min-width: 375px) and (max-width:390px) {
   .main-container {
     max-width: 100%;
     margin-top: 0rem;
     border-radius: 0;
     padding: 0rem;
+    /* margin-block: var(--outer-gap); */
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
@@ -554,6 +516,7 @@ h2 span {
 
   header,
   footer {
+    /* font-size: 0.95rem; */
     font-size: clamp(0rem, 3.5vw, 1.2rem);
     padding: 0rem;
   }
@@ -562,6 +525,7 @@ h2 span {
     font-size: clamp(0.6rem, 0vw, 1rem);
     margin-top: -0.2rem;
     color: #3d3c3c;
+
   }
   .page h1 {
     font-size: clamp(0.85rem, 4vw, 1rem);
@@ -608,6 +572,7 @@ h2 span {
 
   header,
   footer {
+    /* font-size: 0.95rem; */
     font-size: clamp(0rem, 3.5vw, 1.2rem);
     padding: 0rem;
   }
@@ -616,6 +581,7 @@ h2 span {
     font-size: clamp(0.6rem, 0vw, 1rem);
     margin-top: -0.2rem;
     color: #3d3c3c;
+
   }
   .page h1 {
     font-size: clamp(0.85rem, 4vw, 1rem);
@@ -652,6 +618,50 @@ h2 span {
   .footer-number-box {
     padding: 0.5rem 0.7rem !important;
     font-size: 1rem !important;
+  }
+}
+
+/* iPhone specific fixes - Very specific detection */
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) and (-webkit-touch-callout: none) {
+  .page p {
+    font-size: clamp(0.9rem, 3.2vw, 1.5rem) !important;
+    line-height: 1.5 !important;
+    margin: 0.4rem 0 !important;
+    color: #3d3c3c !important;
+  }
+  
+  .page h1,
+  .page h2 {
+    font-size: clamp(1rem, 3.8vw, 1.8rem) !important;
+    line-height: 1.4 !important;
+    margin: 0.4rem 0 !important;
+    margin-top: 0.5vh !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  .lable {
+    font-size: clamp(0.8rem, 3.2vw, 1.4rem) !important;
+    color: black !important;
+  }
+  
+  .page-content {
+    padding: 1.2rem !important;
+    padding-bottom: clamp(2.5rem, 7vh, 3.5rem) !important;
+  }
+  
+  .main-container {
+    margin-block: clamp(15px, 4svh, 30px) !important;
+  }
+  
+  h2 span {
+    font-size: 3vh !important;
+    margin-top: -0.4vh !important;
+    color: #5b82b2 !important;
+  }
+  
+  .span1 {
+    padding-top: 1.2vh !important;
   }
 }
 
