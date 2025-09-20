@@ -371,7 +371,7 @@ h2 span {
     font-size: clamp(0.85rem, 4vw, 1rem);
   }
   .page h2 {
-    font-size: clamp(0.6rem, 3.5vw, 1rem);
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
     display: flex;
     line-height: 1;
     align-items: center;
