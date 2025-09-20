@@ -622,7 +622,7 @@ h2 span {
 }
 
 /* iPhone specific fixes - All iPhone models */
-@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2)  {
   .page p {
     font-size: clamp(0.9rem, 3.2vw, 1.5rem) !important;
     line-height: 1.5 !important;
