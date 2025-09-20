@@ -497,7 +497,7 @@ h2 span {
 /* } */
 
 /* Media query for 375px screen height */
-@media only screen and (max-width: 375px) and (min-width: 300px) {
+@media only screen and (max-width: 375px) {
    .main-container {
     max-width: 100%;
     margin-top: 0rem;
@@ -553,7 +553,7 @@ h2 span {
 }
 
 /* Media query for 395px screen height */
-@media only screen and (max-width: 395px) and (min-width: 376px) {
+@media only screen and (min-width: 376px) and (max-width: 395px) {
   .main-container {
     max-width: 100%;
     border-radius: 0;
