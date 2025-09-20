@@ -345,7 +345,68 @@ h2 span {
   }
 }
 
+/* Small phones (500px and below) */
+@media (max-width: 500px) {
+  .custom-header {
+    grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
+  }
+  .left-section .icon {
+    height: clamp(4.3rem, 14vw, 3.6rem);
+  }
 
+  .main-container {
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0rem;
+    /* margin-top: 2rem; */
+    height: clamp(80svh, var(--app-90vh), 100svh);
+    min-height: clamp(80svh, var(--app-90vh), 100svh);
+    max-height: 100svh;
+    margin-block: clamp(8px, 2svh, 24px);
+  }
+
+  header,
+  footer {
+    font-size: 1rem;
+    padding: 0rem;
+  }
+
+  html,
+  body {
+    overflow: hidden;
+  }
+  #flipbook {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .page {
+    height: 100%;
+  }
+  .page-content {
+    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
+  }
+
+  .page p {
+    font-size: clamp(0vh, 2vw, 1.2rem);
+    margin-top: -0.2rem;
+  color: #3d3c3c;
+
+  }
+  .page h1,
+  .page h2 {
+    font-size: clamp(0.6rem, 2vw, 1.2rem);
+    display: flex;
+    line-height: 1;
+     margin: 0.1rem 0;
+  margin-top: 0.2vh;
+    align-items: center;
+  }
+  span {
+    font-size: 2vh;
+    margin-top: -0.3vh;
+    color: #5b82b2;
+  }
+}
 
 /* Very small phones (499px and below) */
 @media (max-width: 499px) {
@@ -557,70 +618,6 @@ h2 span {
   .footer-number-box {
     padding: 0.5rem 0.7rem !important;
     font-size: 1rem !important;
-  }
-}
-
-
-/* Small phones (500px and below) */
-@media (max-width: 500px) {
-  .custom-header {
-    grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
-  }
-  .left-section .icon {
-    height: clamp(4.3rem, 14vw, 3.6rem);
-  }
-
-  .main-container {
-    max-width: 100%;
-    border-radius: 0;
-    padding: 0rem;
-    /* margin-top: 2rem; */
-    height: clamp(80svh, var(--app-90vh), 100svh);
-    min-height: clamp(80svh, var(--app-90vh), 100svh);
-    max-height: 100svh;
-    margin-block: clamp(8px, 2svh, 24px);
-  }
-
-  header,
-  footer {
-    font-size: 1rem;
-    padding: 0rem;
-  }
-
-  html,
-  body {
-    overflow: hidden;
-  }
-  #flipbook {
-    aspect-ratio: auto;
-    height: 100%;
-  }
-  .page {
-    height: 100%;
-  }
-  .page-content {
-    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
-  }
-
-  .page p {
-    font-size: clamp(0vh, 2vw, 1.2rem);
-    margin-top: -0.2rem;
-  color: #3d3c3c;
-
-  }
-  .page h1,
-  .page h2 {
-    font-size: clamp(0.6rem, 2vw, 1.2rem);
-    display: flex;
-    line-height: 1;
-     margin: 0.1rem 0;
-  margin-top: 0.2vh;
-    align-items: center;
-  }
-  span {
-    font-size: 2vh;
-    margin-top: -0.3vh;
-    color: #5b82b2;
   }
 }
 
