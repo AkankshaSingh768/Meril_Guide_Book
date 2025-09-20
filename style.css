@@ -341,7 +341,7 @@ h2 span {
   }
 }
 
-@media (min-width: 375px) and (max-width:390px) {
+@media  (max-width: 375px) {
   .main-container {
     max-width: 100%;
     margin-top: 0rem;
@@ -550,128 +550,6 @@ h2 span {
 /* @media only screen and (max-height: 1600px) { */
   /* Your styles here */
 /* } */
-
-/* Media query for 375px screen height */
-@media only screen and (max-height: 375px) {
-  .main-container {
-    max-width: 100%;
-    border-radius: 0;
-    padding: 0rem;
-    height: clamp(80svh, var(--app-90vh), 100svh);
-    min-height: clamp(80svh, var(--app-90vh), 100svh);
-    max-height: 100svh;
-    margin-block: clamp(4px, 1svh, 12px);
-  }
-
-  .custom-header {
-    height: clamp(50px, 8vw, 80px);
-  }
-
-  .left-section .icon {
-    height: clamp(2rem, 15vw, 3.5rem);
-    padding: clamp(0.3rem, 1.5vw, 0.8rem);
-  }
-
-  .title {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
-  }
-
-  .subtitle {
-    font-size: clamp(0.6rem, 1.5vw, 0.9rem);
-  }
-
-  .page-content {
-    padding: clamp(0.5rem, 1vw, 0.8rem);
-    padding-bottom: clamp(1rem, 4vh, 2rem);
-  }
-
-  .page p {
-    font-size: clamp(0.7rem, 2vw, 1rem);
-    margin-top: -0.1rem;
-    color: #3d3c3c;
-  }
-
-  .page h1,
-  .page h2 {
-    font-size: clamp(0.7rem, 2.5vw, 1.1rem);
-    display: flex;
-    line-height: 1.2;
-    margin: 0.1rem 0;
-    align-items: center;
-  }
-
-  .footer-number-box {
-    padding: 0.8rem 1.5rem;
-    font-size: clamp(0.9rem, 1.2vw, 1rem);
-  }
-
-  h2 span {
-    font-size: 1.8vh;
-    margin-top: -0.5vh;
-    color: #5b82b2;
-  }
-}
-
-/* Media query for 395px screen height */
-@media only screen and (max-height: 395px) {
-  .main-container {
-    max-width: 100%;
-    border-radius: 0;
-    padding: 0rem;
-    height: clamp(80svh, var(--app-90vh), 100svh);
-    min-height: clamp(80svh, var(--app-90vh), 100svh);
-    max-height: 100svh;
-    margin-block: clamp(6px, 1.5svh, 18px);
-  }
-
-  .custom-header {
-    height: clamp(60px, 9vw, 90px);
-  }
-
-  .left-section .icon {
-    height: clamp(2.2rem, 17vw, 4rem);
-    padding: clamp(0.4rem, 1.8vw, 0.9rem);
-  }
-
-  .title {
-    font-size: clamp(0.85rem, 2.1vw, 1.3rem);
-  }
-
-  .subtitle {
-    font-size: clamp(0.65rem, 1.6vw, 1rem);
-  }
-
-  .page-content {
-    padding: clamp(0.6rem, 1.1vw, 0.9rem);
-    padding-bottom: clamp(1.2rem, 4.5vh, 2.2rem);
-  }
-
-  .page p {
-    font-size: clamp(0.8rem, 2.2vw, 1.1rem);
-    margin-top: -0.1rem;
-    color: #3d3c3c;
-  }
-
-  .page h1,
-  .page h2 {
-    font-size: clamp(0.8rem, 2.8vw, 1.2rem);
-    display: flex;
-    line-height: 1.3;
-    margin: 0.15rem 0;
-    align-items: center;
-  }
-
-  .footer-number-box {
-    padding: 0.9rem 1.7rem;
-    font-size: clamp(1rem, 1.3vw, 1.1rem);
-  }
-
-  h2 span {
-    font-size: 2.2vh;
-    margin-top: -0.6vh;
-    color: #5b82b2;
-  }
-}
 
 /* Exact match for 720 × 1600 */
 @media only screen and (max-width: 395px){
