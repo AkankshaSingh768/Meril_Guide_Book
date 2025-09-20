@@ -498,61 +498,56 @@ h2 span {
 
 /* Media query for 375px screen height */
 @media only screen and (max-width: 375px) and (min-width: 300px) {
-  .main-container {
+   .main-container {
     max-width: 100%;
+    margin-top: 0rem;
     border-radius: 0;
     padding: 0rem;
+    margin-block: clamp(8px, 2svh, 24px);
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
-    margin-block: clamp(4px, 1svh, 12px);
   }
 
-  .custom-header {
-    height: clamp(50px, 8vw, 80px);
-  }
-
-  .left-section .icon {
-    height: clamp(2rem, 15vw, 3.5rem);
-    padding: clamp(0.3rem, 1.5vw, 0.8rem);
-  }
-
-  .title {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
-  }
-
-  .subtitle {
-    font-size: clamp(0.6rem, 1.5vw, 0.9rem);
-  }
-
-  .page-content {
-    padding: clamp(0.5rem, 1vw, 0.8rem);
-    padding-bottom: clamp(1rem, 4vh, 2rem);
+  header,
+  footer {
+    /* font-size: 0.95rem; */
+    font-size: clamp(0rem, 3.5vw, 1.2rem);
+    padding: 0rem;
   }
 
   .page p {
-    font-size: clamp(0.7rem, 2vw, 1rem);
-    margin-top: -0.1rem;
+    font-size: clamp(0.6rem, 0vw, 1rem);
+    margin-top: -0.2rem;
     color: #3d3c3c;
-  }
 
-  .page h1,
+  }
+  .page h1 {
+    font-size: clamp(0.85rem, 4vw, 1rem);
+  }
   .page h2 {
-    font-size: clamp(0.7rem,3vw, 1.1rem);
+    font-size: clamp(0.5rem, 5.5vw, 1rem);
     display: flex;
-    line-height: 1.2;
-    margin: 0.1rem 0;
+    line-height: 1.5;
     align-items: center;
   }
-
-  .footer-number-box {
-    padding: 0.8rem 1.5rem;
-    font-size: clamp(0.9rem, 1.2vw, 1rem);
+  html,
+  body {
+    overflow: hidden;
   }
-
+  #flipbook {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .page {
+    height: 100%;
+  }
+  .page-content {
+    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
+  }
   h2 span {
-    font-size: 1.8vh;
-    margin-top: -0.5vh;
+    font-size: 2.5vh;
+    margin-top: -0.8vh;
     color: #5b82b2;
   }
 }
