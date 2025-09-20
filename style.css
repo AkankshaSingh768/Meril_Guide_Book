@@ -588,7 +588,7 @@ h2 span {
 
   .page p {
     font-size: clamp(0vh,2.8vw, 1.2rem);
-    margin-top: -0.2rem;
+    margin-top: -0.1rem;
   color: #3d3c3c;
 
   }
