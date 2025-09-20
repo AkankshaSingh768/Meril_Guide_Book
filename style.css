@@ -381,7 +381,7 @@ h2 span {
 
   .page p {
     font-size: clamp(0vh, 2.5vw, 1.2rem);
-    margin-top: -0.2rem;
+    /* margin-top: -0.2rem; */
   }
   .page h1,
   .page h2 {
