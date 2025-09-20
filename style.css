@@ -387,14 +387,14 @@ h2 span {
   }
 
   .page p {
-    font-size: clamp(0vh, 2.5vw, 1.2rem);
+    font-size: clamp(0vh, 2vw, 1.2rem);
     margin-top: -0.2rem;
   color: #3d3c3c;
 
   }
   .page h1,
   .page h2 {
-    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.6rem, 2vw, 1.2rem);
     display: flex;
     line-height: 1;
      margin: 0.1rem 0;
