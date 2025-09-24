@@ -227,6 +227,15 @@ h2 span {
   /* color: #333; */
 }
 
+/* Ensure perfect centering on very small phones */
+@media (max-width: 500px) {
+  .custom-header {
+    grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
+  }
+  .left-section .icon {
+    height: clamp(4.3rem, 14vw, 3.6rem);
+  }
+}
 
 /* Right (RI SVG) */
 .right-section {
@@ -278,36 +287,53 @@ h2 span {
   color: #393939;
   font-size: clamp(0.6rem, 2.5vw, 1.2rem);
 }
-
-
-
-
-/* Fix layout for Galaxy S8, S20 Ultra (portrait) */
-@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
+@media (max-width: 500px) {
   .main-container {
-    height: auto; /* let it grow instead of being fixed at 80vh */
-    margin-block: 1rem;
-    padding: 0.5rem;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0rem;
+    /* margin-top: 2rem; */
+    height: clamp(80svh, var(--app-90vh), 100svh);
+    min-height: clamp(80svh, var(--app-90vh), 100svh);
+    max-height: 100svh;
+    margin-block: clamp(8px, 2svh, 24px);
   }
 
+  header,
+  footer {
+    font-size: 1rem;
+    padding: 0rem;
+  }
+
+  html,
+  body {
+    overflow: hidden;
+  }
   #flipbook {
-    aspect-ratio: auto; /* allow automatic height */
-    height: auto;
+    aspect-ratio: auto;
+    height: 100%;
   }
-
   .page {
-    height: auto;
-    padding: 1rem 0.5rem;
+    height: 100%;
+  }
+  .page-content {
+    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
   }
 
-  img.responsive-image {
-    width: 100%; /* scale to container width properly */
-    height: auto;
-    max-height: 80vh;
+  .page p {
+    font-size: clamp(0vh, 2.5vw, 1.2rem);
+    margin-top: -0.2rem;
   }
-  h2 span {
-    font-size: 2.5vh;
-    margin-top: -0.8vh;
+  .page h1,
+  .page h2 {
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+    display: flex;
+    line-height: 1;
+    align-items: center;
+  }
+  span {
+    font-size: 2vh;
+    margin-top: -0.3vh;
     color: #5785C3;
   }
 }
@@ -366,34 +392,38 @@ h2 span {
   }
 }
 
-
-
-
-@media (min-width: 376px) and (max-width: 500px) {
-
-  .custom-header {
-    grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
-  }
-  .left-section .icon {
-    height: clamp(4.3rem, 14vw, 3.6rem);
-  }
+@media (max-width: 320px) {
   .main-container {
     max-width: 100%;
+    margin-top: 0rem;
     border-radius: 0;
     padding: 0rem;
-    /* margin-top: 2rem; */
+    margin-block: clamp(8px, 2svh, 24px);
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
-    margin-block: clamp(8px, 2svh, 24px);
   }
 
   header,
   footer {
-    font-size: 1rem;
+    /* font-size: 0.95rem; */
+    font-size: clamp(0rem, 3.5vw, 1.2rem);
     padding: 0rem;
   }
 
+  .page p {
+    font-size: clamp(0.6rem, 0vw, 1rem);
+    margin-top: -0.2rem;
+  }
+  .page h1 {
+    font-size: clamp(0.85rem, 4vw, 1rem);
+  }
+  .page h2 {
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
+    display: flex;
+    line-height: 1.5;
+    align-items: center;
+  }
   html,
   body {
     overflow: hidden;
@@ -408,29 +438,42 @@ h2 span {
   .page-content {
     padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
   }
-
-  .page p {
-    font-size: clamp(0vh, 2.5vw, 1.2rem);
-    margin-top: -0.2rem;
-  }
-  .page h1,
-  .page h2 {
-    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
-    display: flex;
-    line-height: 1;
-    align-items: center;
-  }
-  span {
-    font-size: 2vh;
-    margin-top: -0.3vh;
+  h2 span {
+    font-size: 2.5vh;
+    margin-top: -0.8vh;
     color: #5785C3;
   }
 }
 
+/* Fix layout for Galaxy S8, S20 Ultra (portrait) */
+@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
+  .main-container {
+    height: auto; /* let it grow instead of being fixed at 80vh */
+    margin-block: 1rem;
+    padding: 0.5rem;
+  }
 
+  #flipbook {
+    aspect-ratio: auto; /* allow automatic height */
+    height: auto;
+  }
 
+  .page {
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
 
-
+  img.responsive-image {
+    width: 100%; /* scale to container width properly */
+    height: auto;
+    max-height: 80vh;
+  }
+  h2 span {
+    font-size: 2.5vh;
+    margin-top: -0.8vh;
+    color: #5785C3;
+  }
+}
 
 /* @media only screen and (max-width: 430px) and (min-device-width: 320px) {
   
@@ -487,41 +530,5 @@ h2 span {
   .footer-number-box {
     padding: 0.5rem 0.7rem !important;
     font-size: 1rem !important;
-  }
-}
-
-/* Targeted fix for exactly 395px width without affecting other phones */
-@media (width: 395px) {
-  .main-container {
-    height: auto;
-    min-height: auto;
-    max-height: none;
-    margin-block: 1rem;
-  }
-
-  html,
-  body {
-    overflow: auto;
-    overflow-x: hidden;
-  }
-
-  #flipbook {
-    aspect-ratio: auto;
-    height: auto;
-  }
-
-  .page {
-    height: auto;
-    padding-bottom: 1rem;
-  }
-
-  img.responsive-image {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-  }
-
-  .page h2 {
-    line-height: 1.2;
   }
 }
