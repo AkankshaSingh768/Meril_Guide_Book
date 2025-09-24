@@ -334,7 +334,7 @@ h2 span {
 }
 
 /* Fix layout for Galaxy S8, S20 Ultra (portrait) */
-@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
+@media (max-width: 360px)  {
   .main-container {
     height: auto; /* let it grow instead of being fixed at 80vh */
     margin-block: 1rem;
