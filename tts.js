@@ -2927,7 +2927,7 @@ function createTTSButton(text) {
     width: "12px",
     height: "12px",
     padding: "1px",
-    color: "black",
+    color: "#393939",
   });
 
   button.addEventListener("click", async (e) => {
