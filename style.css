@@ -592,3 +592,39 @@ h2 span {
     font-size: 1rem !important;
   }
 }
+
+/* Targeted fix for exactly 395px width without affecting other phones */
+@media (width: 395px) {
+  .main-container {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    margin-block: 1rem;
+  }
+
+  html,
+  body {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  #flipbook {
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .page {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  img.responsive-image {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+  }
+
+  .page h2 {
+    line-height: 1.2;
+  }
+}
