@@ -98,7 +98,7 @@ img.responsive-image {
 h2 span {
   font-size: 2.5vh;
   margin-top: -0.8vh;
-  color: #5b82b2;
+  color: #5785C3;
 }
 .span1 {
   padding-top: 1vh;
@@ -167,8 +167,8 @@ h2 span {
 
 /* Page number inside yellow bar */
 .footer-number-box {
-  background-color: #f4b42a;
-  color: #222;
+  background-color: #FBBB2C;
+  color: #393939;
   /* margin-right: 1rem; */
   margin-top: -1rem;
   padding: 1.1rem 2rem;
@@ -181,8 +181,8 @@ h2 span {
   display: grid;
   grid-template-columns: auto 1fr auto; /* left icon | center text | right logo */
   align-items: center;
-  background-color: #f4b42a; /* Yellow-orange background */
-  color: #222;
+  background-color: #FBBB2C; /* Yellow-orange background */
+  color: #393939;
   padding: 0rem;
   /* border-radius: 12px 12px 0 0; */
   height: clamp(70px, 10vw, 100px); /*responsive header height */
@@ -240,7 +240,7 @@ h2 span {
 /* Right (RI SVG) */
 .right-section {
   height: clamp(70px, 10vw, 100px);
-  background-color: #5886c4;
+  background-color: #5785C3;
   /* width:120px;Blue box background */
   display: flex;
   align-items: center;
@@ -268,7 +268,7 @@ h2 span {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   line-height: 1.2;
   margin: 0rem 0;
-  color: #3d3c3c;
+  color: #393939;
 }
 .page h1,
 .page h2 {
@@ -278,13 +278,13 @@ h2 span {
   margin-top: 0.3vh;
   display: flex;
   align-items: center;
-  color: #3d3c3c;
+  color: #393939;
 }
 .lable {
   display: flex;
   /* align-items:left; */
   /* margin-left: 0px; */
-  color: black;
+  color: #393939;
   font-size: clamp(0.6rem, 2.5vw, 1.2rem);
 }
 @media (max-width: 500px) {
@@ -334,7 +334,7 @@ h2 span {
   span {
     font-size: 2vh;
     margin-top: -0.3vh;
-    color: #5b82b2;
+    color: #5785C3;
   }
 }
 
@@ -388,7 +388,7 @@ h2 span {
   h2 span {
     font-size: 2.5vh;
     margin-top: -0.8vh;
-    color: #5b82b2;
+    color: #5785C3;
   }
 }
 
@@ -441,7 +441,7 @@ h2 span {
   h2 span {
     font-size: 2.5vh;
     margin-top: -0.8vh;
-    color: #5b82b2;
+    color: #5785C3;
   }
 }
 
@@ -471,7 +471,7 @@ h2 span {
   h2 span {
     font-size: 2.5vh;
     margin-top: -0.8vh;
-    color: #5b82b2;
+    color: #5785C3;
   }
 }
 
