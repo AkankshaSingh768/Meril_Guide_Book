@@ -44,8 +44,9 @@ $(document).ready(function () {
       subtitles: [
         { start: 48, subtitle: "Generic", icon: "../icons/Icon-10.png" },
         { start: 52, subtitle: "Total Knee System", icon: "../icons/Icon-11.png" },
+        { start: 57, subtitle: "Total Knee System", icon: "../icons/Icon-12.png" },
         { start: 61, subtitle: "Spine", icon: "../icons/Icon-13.png" },
-        { start: 65, subtitle: "Robotics", icon: "../icons/Icon-14.png" }
+        { start: 66, subtitle: "Robotics", icon: "../icons/Icon-14.png" }
       ]
     },
     {
