@@ -235,6 +235,14 @@ h2 span {
   .left-section .icon {
     height: clamp(4.3rem, 14vw, 3.6rem);
   }
+  .right-section {
+    padding: 0 0.25rem;
+  }
+  .ri-logo {
+    padding: 0.5rem;
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
 
 /* Ensure perfect centering for 431–500px */
@@ -244,6 +252,14 @@ h2 span {
   }
   .left-section .icon {
     height: clamp(4.3rem, 14vw, 3.6rem);
+  }
+  .right-section {
+    padding: 0 0.25rem;
+  }
+  .ri-logo {
+    padding: 0.5rem;
+    max-height: 100%;
+    max-width: 100%;
   }
 }
 
@@ -257,6 +273,7 @@ h2 span {
   justify-content: center;
   padding: 0 0.5rem;
   justify-self: end;
+  overflow: hidden;
 }
 
 .ri-logo {
