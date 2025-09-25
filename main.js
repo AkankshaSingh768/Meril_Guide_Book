@@ -185,7 +185,9 @@ $(document).ready(function () {
     autoCenter: true,
     display: 'single',
     duration: 1000,
-    acceleration: true
+    acceleration: true,
+    gradient: true,
+    elevation: 100
   });
 
   // Optional: Initialize TTS if defined

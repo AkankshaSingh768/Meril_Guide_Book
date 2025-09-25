@@ -532,3 +532,20 @@ h2 span {
     font-size: 1rem !important;
   }
 }
+
+
+ #flipbook .turn-page {
+        background-color: #fff;
+        background-size: 100% 100%;
+      }
+
+
+
+.span2{
+  padding-top: 2.5vh;
+}
+
+
+.span3{
+  padding-top: 3vh;
+}
