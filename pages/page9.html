@@ -1,6 +1,6 @@
-<div class="page-content" style="display: flex; gap: 1em">
+<div class="page-content" style="display: flex; gap: 1em;position: relative;z-index: 1;">
   <!-- Left Column -->
-  <div style="width: 50%">
+  <div style="width: 50%;position: relative;z-index: 1;">
     <h2>Angiographic Success</h2>
     <p>
       Achievement of desired results as seen in angiographic imaging after a
@@ -57,7 +57,7 @@
   </div>
 
   <!-- Right Column -->
-  <div style="width: 50%">
+  <div style="width: 50%;position: relative;z-index: 1;">
     <p>
       The ability of a balloon to pass through narrow or obstructed vessels.
     </p>
@@ -125,6 +125,7 @@
       clip-path: polygon(0 0, 82% 0, 100% 50%, 82% 100%, 0 100%);
       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
       transform: translateX(-0.4rem);
+      z-index: 0;
     }
 
     /* Tweak for small phones */
@@ -135,6 +136,7 @@
       .angioplasty-img {
         width: clamp(2vh, 13vh, 280px);
         transform: translateX(-0.75rem);
+        z-index: 0;
       }
     }
     @media (max-width: 375px) {
