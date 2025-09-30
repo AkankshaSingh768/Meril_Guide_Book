@@ -1,5 +1,8 @@
-<div class="page-content" style="display: flex; gap: 1em;position: relative;z-index: 1;">
-  <div style="width: 50%;position: relative;z-index: 1;">
+<div
+  class="page-content"
+  style="display: flex; gap: 1em; position: relative; z-index: 1"
+>
+  <div style="width: 50%; position: relative; z-index: 1">
     <h2><span>A</span>blation Depth</h2>
     <p>
       The extent to which tissue is removed or destroyed by an ablation
@@ -56,7 +59,7 @@
   </div>
 
   <!-- Right Column -->
-  <div style="width: 50%;position: relative;z-index: 1;">
+  <div style="width: 50%; position: relative; z-index: 1">
     <h2>Carbonization</h2>
     <p>Formation of carbon deposits on tissue due to excessive heat.</p>
 
@@ -72,25 +75,40 @@
     <h2>Coagulation Mode</h2>
     <p>Electrosurgical setting designed for coagulation tissue.</p>
 
-    <h2>Coagulation Pathway</h2>
-    <p>
-      Biological process and <br />
-      sequence leading to <br />
-      blood clot formation.
-    </p>
-
-    <img
-      src="../pageImages/ENT/ENT-124.png"
-      alt="ENT-8"
-      style="
-        width: 22vh;
-        height: auto;
-        position: relative;
-        margin-top: -32%;
-        margin-right: -2vh;
-        z-index: 0;
-      "
-    />
+    <!-- Container for image and text -->
+    <div style="position: relative; z-index: 1">
+      <!-- Text (overlay) -->
+      <div
+        style="
+          position: absolute;
+          top:0%;
+          left:0%;
+          z-index: 2;
+          background: transparent;
+        "
+      >
+        <h2>Coagulation Pathway</h2>
+        <p>
+          Biological process and <br />
+          sequence leading to <br />
+          blood clot formation.
+        </p>
+      </div>
+      <!-- Image -->
+      <img
+        src="../pageImages/ENT/ENT-124.png"
+        alt="ENT-8"
+        style="
+          width: 22vh;
+          height: auto;
+          position: relative;
+          margin-top: -11%;
+          margin-right: -2vh;
+          z-index: 0;
+        "
+      />
+      
+    </div>
 
     <h2>Coagulation Settings</h2>
     <p>

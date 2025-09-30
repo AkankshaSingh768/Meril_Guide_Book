@@ -65,9 +65,15 @@
     <h2 class="span1"><span>L</span>abeling Requirements</h2>
 
     <div
-      style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))"
+      style="
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        position: relative;
+        z-index: 1;
+      "
     >
-      <div>
+      <!-- Text Block -->
+      <div style="position: relative; z-index: 1; background: transparent">
         <p>
           Specifications for information that must be included on the test
           packaging.
@@ -80,15 +86,17 @@
         <h2>Limit of Detection (LOD)</h2>
         <p>Lowest concentration of a substance that</p>
       </div>
+
+      <!-- Image -->
       <img
         src="../pageImages/Diagnostics/Diagnostics-98.png"
         alt="Heart Diagram"
         style="
           width: 21vh;
           height: 24vh;
-          position: relative;
-          margin-top: -7vh;
-          margin-left: -1vh;
+          position: absolute;
+          top: -5vh;
+          left: 8vh;
           z-index: 0;
         "
       />
