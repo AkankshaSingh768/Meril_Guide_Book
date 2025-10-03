@@ -104,7 +104,7 @@
         let pageNumber = parseInt(document.getElementById("pageInput").value);
         if (!isNaN(pageNumber)) {
           // Only add +2 if your flipbook actually has 2 cover pages before the first content page
-          let actualPage = pageNumber; // or pageNumber + 2 if needed
+          let actualPage = pageNumber + 2; // or pageNumber + 2 if needed
           $("#flipbook").turn("page", actualPage);
         } else {
           alert("Please enter a valid page number!");
