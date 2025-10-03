@@ -23,8 +23,9 @@
       <div id="flipbook"></div>
     </div>
     <!-- Page Jump Box -->
-    <div style="text-align: center;">
-      <input
+    <div style="text-align: center;gap:18px; display: flex; justify-content: center; margin-top: 10px;">
+      <div>
+         <input
         type="number"
         id="pageInput"
         placeholder="Enter page no."
@@ -35,7 +36,9 @@
         Go
       </button>
 
-      <button
+      </div>
+      <div>
+          <button
         onclick="$('#flipbook').turn('previous');"
         style="height:30px;width:25px;"
       >
@@ -55,6 +58,11 @@
 </svg>
 
       </button>
+
+      </div>
+     
+
+    
     </div>
 
     <script>
