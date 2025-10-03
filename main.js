@@ -187,7 +187,11 @@ $(document).ready(function () {
     duration: 1000,
     acceleration: true,
     gradient: true,
-    elevation: 100
+    elevation: 100,
+    when: {},
+    pages: 150, // number of pages
+    // **Disable corner clicking**
+    cornerSize: 0
   });
 
   // Optional: Initialize TTS if defined
