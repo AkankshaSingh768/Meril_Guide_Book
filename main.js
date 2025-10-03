@@ -188,11 +188,15 @@ $(document).ready(function () {
     acceleration: true,
     gradient: true,
     elevation: 100,
-    when: {},
-    pages: 150, // number of pages
-    // **Disable corner clicking**
-    cornerSize: 0
+     pages: 150, // total pages
+    cornerSize: 0 // corners disabled
+    
   });
+  
+// Disable page-flip on simple click/tap
+$("#flipbook").bind('click', function(e){
+    e.preventDefault();
+});
 
   // Optional: Initialize TTS if defined
   if (typeof initializeTTS === "function") {
