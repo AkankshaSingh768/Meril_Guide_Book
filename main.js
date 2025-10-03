@@ -9,7 +9,7 @@ $(document).ready(function () {
       start: 4,
       title: "Vascular Intervention",
       subtitles: [
-        { start: 4, subtitle: "Generic", icon: "../icons/Icon-1.png" },
+        { start: 4, subtitle: "Generic", icon: "../icons/Icon-32.png" },
         { start: 9, subtitle: "Coronary", icon: "../icons/Icon-2.png" },
         { start: 14, subtitle: "Congenital Heart", icon: "../icons/Icon-3.png" },
         { start: 19, subtitle: "Heart Valves", icon: "../icons/Icon-4.png" }
