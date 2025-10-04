@@ -178,25 +178,26 @@ $(document).ready(function () {
   // });
   
 
-  // Initialize flipbook
-  $('#flipbook').turn({
-    width: '100%',
-    height: '100%',
-    autoCenter: true,
-    display: 'single',
-    duration: 1000,
-    acceleration: true,
-    gradient: true,
-    elevation: 100,
-     pages: 150, // total pages
-    cornerSize: 0 // corners disabled
-    
-  });
-  
-// Disable page-flip on simple click/tap
-$("#flipbook").bind('click', function(e){
-    e.preventDefault();
+ // Initialize flipbook
+$('#flipbook').turn({
+  width: '100%',
+  height: '100%',
+  autoCenter: true,
+  display: 'single',
+  duration: 1000,
+  acceleration: true,
+  gradient: true,
+  elevation: 100,
+  pages: 150
 });
+
+// ✅ Disable corner click flips but allow drag
+$('#flipbook').on('start', function (event, pageObject, corner) {
+  if (corner) {
+    event.preventDefault(); // stops "click-to-flip"
+  }
+});
+
 
   // Optional: Initialize TTS if defined
   if (typeof initializeTTS === "function") {
