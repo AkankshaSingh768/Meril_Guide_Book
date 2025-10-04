@@ -9,7 +9,7 @@ $(document).ready(function () {
       start: 4,
       title: "Vascular Intervention",
       subtitles: [
-        { start: 4, subtitle: "Generic", icon: "../icons/Icon-1.png" },
+        { start: 4, subtitle: "Generic", icon: "../icons/Icon-32.png" },
         { start: 9, subtitle: "Coronary", icon: "../icons/Icon-2.png" },
         { start: 14, subtitle: "Congenital Heart", icon: "../icons/Icon-3.png" },
         { start: 19, subtitle: "Heart Valves", icon: "../icons/Icon-4.png" }
@@ -187,8 +187,16 @@ $(document).ready(function () {
     duration: 1000,
     acceleration: true,
     gradient: true,
-    elevation: 100
+    elevation: 100,
+     pages: 150, // total pages
+    cornerSize: 0 // corners disabled
+    
   });
+  
+// Disable page-flip on simple click/tap
+$("#flipbook").bind('click', function(e){
+    e.preventDefault();
+});
 
   // Optional: Initialize TTS if defined
   if (typeof initializeTTS === "function") {

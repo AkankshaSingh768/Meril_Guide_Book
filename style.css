@@ -58,7 +58,7 @@ body {
   max-height: 100svh;
   max-width: 900px;
   margin-inline: auto;
-  margin-block: clamp(8px, 2svh, 24px);
+  margin-block: 0 clamp(8px, 2svh, 24px);
   /* padding: clamp(0.25rem, 1vw, 0.75rem); */
   overflow: hidden; /* no page scroll inside container */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -233,7 +233,7 @@ h2 span {
     grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
   }
   .left-section .icon {
-    height: clamp(4.3rem, 14vw, 3.6rem);
+    height: clamp(3.9rem, 14vw, 3.6rem);
   }
 }
 
@@ -296,7 +296,7 @@ h2 span {
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
-    margin-block: clamp(8px, 2svh, 24px);
+    margin-block: 0 clamp(8px, 2svh, 24px);
   }
 
   header,
@@ -348,7 +348,7 @@ h2 span {
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
-    margin-block: clamp(8px, 2svh, 24px);
+    margin-block: 0 clamp(8px, 2svh, 24px);
   }
 
   header,
@@ -398,7 +398,7 @@ h2 span {
     margin-top: 0rem;
     border-radius: 0;
     padding: 0rem;
-    margin-block: clamp(8px, 2svh, 24px);
+    margin-block: 0 clamp(8px, 2svh, 24px);
     height: clamp(80svh, var(--app-90vh), 100svh);
     min-height: clamp(80svh, var(--app-90vh), 100svh);
     max-height: 100svh;
@@ -548,4 +548,7 @@ h2 span {
 
 .span3{
   padding-top: 3vh;
+}
+.span4{
+  padding-top: -2vh;
 }
