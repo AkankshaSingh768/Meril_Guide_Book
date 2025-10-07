@@ -72,7 +72,7 @@
       </button>
       <button
         onclick="$('#flipbook').turn('next');"
-        style="height: 30px; width: 30px;"
+        style="height: 30px; width: 30px"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -100,14 +100,23 @@
 
     <script>
       function goToPage() {
-        let pageNumber = parseInt(document.getElementById("pageInput").value);
-        if (!isNaN(pageNumber)) {
-          // Only add +2 if your flipbook actually has 2 cover pages before the first content page
-          let actualPage = pageNumber + 2; // or pageNumber + 2 if needed
-          $("#flipbook").turn("page", actualPage);
-        } else {
-          alert("Please enter a valid page number!");
+        const totalPages = 152; // your total flipbook pages
+        const input = document.getElementById("pageInput");
+        const pageNumber = parseInt(input.value);
+
+        if (isNaN(pageNumber)) {
+          alert("⚠️ Please enter a valid page number!");
+          return;
         }
+
+        if (pageNumber < 1 || pageNumber > totalPages) {
+          alert(`⚠️ Page number must be between 1 and ${totalPages}.`);
+          return;
+        }
+
+        // Adjust if your flipbook has cover pages before actual content
+        const actualPage = pageNumber + 2;
+        $("#flipbook").turn("page", actualPage);
       }
     </script>
 
