@@ -154,7 +154,7 @@ button, input {
   object-fit: contain;
 }
 
-/* .page p {
+.page p {
   font-size:1.2vh;
   margin-top: -0.2vh;
   line-height: 1.3vh;
@@ -164,7 +164,7 @@ button, input {
   display: inline-flex;
   
   
-} */
+}
 .page-content{
     padding: 1rem;
 }
@@ -205,67 +205,4 @@ span{
 }
 .span1 {
   padding-top: 1vh;
-}
-
-
-/* ===========================
-   RESPONSIVE FONT ADJUSTMENTS
-   =========================== */
-
-/* Default (for large screens / desktops) */
-.page h2 {
-  font-size: 1.3vh;
-  align-items: center;
-}
-
-.page p {
-  font-size: 1.2vh;
-  line-height: 1.3vh;
-}
-
-/* 🖥️ Large screens (≥ 1200px) */
-@media (min-width: 1200px) {
-  .page h2 {
-    font-size: 1rem; /* slightly larger text */
-    align-items: center;
-  }
-  .page p {
-    font-size: 0.8rem;
-  }
-}
-
-/* 💻 Medium screens / Tablets (768px – 1199px) */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .page h2 {
-    font-size: 0.7rem;
-    align-items: center;
-  }
-  .page p {
-    font-size: 0.8rem;
-    line-height: 1rem;
-  }
-}
-
-/* 📱 Small screens / Mobiles (480px – 767px) */
-@media (min-width: 480px) and (max-width: 767px) {
-  .page h2 {
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .page p {
-    font-size: 0.7rem;
-    line-height: 1rem;
-  }
-}
-
-/* 📱 Extra small devices (< 480px) */
-@media (max-width: 479px) {
-  .page h2 {
-    font-size: 0.75rem;
-    align-items: center;
-  }
-  .page p {
-    font-size: 0.65rem;
-    line-height: 0.9rem;
-  }
 }
