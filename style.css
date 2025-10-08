@@ -157,10 +157,12 @@ button, input {
 .page p {
   font-size:1.2vh;
   margin-top: -0.2vh;
+  line-height: 1.3vh;
 }
 .page h2 {
   font-size:1.3vh;
   display: inline-flex;
+  
   
 }
 .page-content{
@@ -170,6 +172,7 @@ button, input {
 
 /* Yellow footer bar at bottom */
 .page-footer-bar {
+
   position: absolute;
   bottom: 0;
   left: 0;
