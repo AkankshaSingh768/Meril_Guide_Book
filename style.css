@@ -76,7 +76,7 @@ button, input {
 
 /* Adjust navigation section spacing */
 .page-controls {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
