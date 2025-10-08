@@ -129,7 +129,7 @@ button, input {
 }
 
 .center-section h1 {
-  font-size: 1.1rem;
+  font-size: 0.7rem;
 }
 
 .center-section p {
@@ -176,7 +176,7 @@ button, input {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: clamp(2rem, 5vh, 2.5rem);
+  height:60px;
   /* background-color: #F4B42A; */
   display: flex;
   justify-content: flex-end;
