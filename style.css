@@ -162,6 +162,7 @@ button, input {
 
 .page p {
   font-size:1.2vh;
+  margin-top: 0vh;
 }
 .page h2 {
   font-size:1.3vh;
@@ -213,6 +214,7 @@ span{
 @media(max-width:500px){
   .container{
     max-height: 85vh;
+
     display: flex;
   align-items:stretch;
   justify-content: center;
