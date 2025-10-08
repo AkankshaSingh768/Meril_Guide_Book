@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 html, body {
@@ -211,7 +212,7 @@ span{
   padding-top: 1vh;
 }
 /* --- MOBILE FIX --- */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .container {
     width: 100vw;        /* force full viewport width */
     max-width: 110vw;    
