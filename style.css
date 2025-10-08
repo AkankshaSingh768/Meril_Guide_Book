@@ -76,7 +76,7 @@ button, input {
 
 /* Adjust navigation section spacing */
 .page-controls {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@ button, input {
 .page-controls button,
 .page-controls input {
   font-size: clamp(0.8rem, 2.5vw, 1rem);
-  padding: 0.4rem 0.8rem;
+  padding: 0.2rem 0.4rem;
 }
 
 /* Header Layout */
