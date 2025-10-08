@@ -1,108 +1,155 @@
+/* Basic reset */
 * {
   box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
   margin: 0;
-  /* font-family: sans-serif;
-   */
-  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-  /* font-family: Calibri, "Helvetica Neue", Arial, sans-serif; */
-  font-family: "Carlito", Arial, sans-serif;
-
-  background-color: grey;
-  overflow: hidden;
-  overflow-x: hidden;
-}
-/* Reliable 90vh variable: prefer 90dvh, fall back to 90svh */
-:root {
-  --app-90vh: 90svh;
-}
-@supports (height: 90dvh) {
-  :root {
-    --app-90vh: 90dvh;
-  }
-}
-/* Responsive outer spacing (top/bottom) capped so no scroll occurs */
-:root {
-  --outer-gap: min(5svh, clamp(2rem, 2vh, 1.5rem));
-}
-@supports (height: 90dvh) {
-  :root {
-    --outer-gap: min(5dvh, clamp(2rem, 2vh, 1.5rem));
-  }
-}
-/* #flipbook .page {
-  background-color: white;
-  overflow: hidden;
+  padding: 0;
 }
 
-#flipbook {
-  width: 900px;
-   /* width: 100%; */
-/* aspect-ratio: 16 / 9; */
-/* height: 600px; */
-/* z-index: 10; */
-/* background-color: white; */
-/* } */
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-  height: clamp(80svh, var(--app-90vh), 100svh);
-  min-height: clamp(80svh, var(--app-90vh), 100svh);
-  max-height: 100svh;
-  max-width: 900px;
-  margin-inline: auto;
-  margin-block: 0 clamp(8px, 2svh, 24px);
-  /* padding: clamp(0.25rem, 1vw, 0.75rem); */
-  overflow: hidden; /* no page scroll inside container */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  /* border-radius: 12px; */
-  position: relative;
-}
-
-.page {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+html, body {
   height: 100%;
-  background-color: white;
-  overflow: visible;
+  font-family: "Carlito", Arial, sans-serif;
+  background: #eee;
+  overflow: hidden;
 }
+
+/* Outer parent centers the container on screen */
+.container-parent {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Make container fill the parent completely for cover pages */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  overflow: hidden;
+}
+/* Make cover page image fit perfectly */
 .responsive-image {
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  /* object-fit: contain; */
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
-img.responsive-image {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  /* object-fit: contain; */
-}
-@supports (padding: max(0px)) {
-  body {
-    padding: env(safe-area-inset);
-  }
+
+/* Flipbook takes full size of container */
+#flipbook {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-h2 span {
-  font-size: 2.5vh;
-  margin-top: -0.8vh;
-  color: #5785C3;
+/* For turn.js page background */
+#flipbook .turn-page {
+  background-color: #fff;
+  background-size: 100% 100%;
 }
-.span1 {
-  padding-top: 1vh;
+
+/* Images or page content inside flipbook stay within aspect ratio */
+/* #flipbook img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+} */
+
+/* Responsive page number box, buttons, etc. */
+button, input {
+  font-family: "Carlito", Arial, sans-serif;
 }
+
+/* Adjust navigation section spacing */
+.page-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+}
+/* Header Layout */
+.custom-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Left | Center | Right */
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FBBB2C; /* Yellow-orange */
+  height: 75px; /* Matches your image’s scale */
+  width: 100%;
+  color: #393939;
+  overflow: hidden;
+}
+
+/* Left Section (Stomach Icon) */
+.left-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+.left-section .icon {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Center Section (Title Text) */
+.center-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.center-section h1 {
+  font-size: 1.1rem;
+}
+
+.center-section p {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* Right Section (RI Logo Box) */
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5785C3; /* Blue box */
+  width: auto;
+  height: 100%;
+  padding: 0 0.8rem;
+}
+
+.ri-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.page p {
+  font-size:1.2vh;
+}
+.page h2 {
+  font-size:1.3vh;
+  display: inline-flex;
+  
+}
+.page-content{
+    padding: 1rem;
+}
+
 
 /* Yellow footer bar at bottom */
 .page-footer-bar {
@@ -119,51 +166,6 @@ h2 span {
   /* border-radius: 0 0 12px 12px; */
   box-sizing: border-box;
 }
-.page-content {
-  padding: clamp(1rem, 1.2vw, 1rem);
-  padding-bottom: clamp(
-    2rem,
-    6vh,
-    3rem
-  ); /* avoid footer overlap on all screens */
-}
-
-/* Spacing between page-content and header */
-.page-content + .custom-header {
-  margin: 0.5rem 0;
-}
-
-/* Spacing between header and page-content */
-.custom-header + .page-content {
-  margin-top: 0.5rem;
-}
-
-/* Spacing between multiple page-content sections */
-.page-content + .page-content {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-/* Better spacing for mobile */
-@media (max-width: 768px) {
-  .page-content {
-    padding: 0.75rem;
-    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
-  }
-
-  .page-content + .custom-header {
-    margin: -1.3rem 0;
-  }
-
-  .custom-header + .page-content {
-    margin-top: 0.25rem;
-  }
-
-  .page-content + .page-content {
-    margin-top: 0.25rem;
-    padding-top: 0.25rem;
-  }
-}
 
 /* Page number inside yellow bar */
 .footer-number-box {
@@ -175,380 +177,4 @@ h2 span {
   /* font-weight: bold; */
   font-size: clamp(1rem, 1.5vw, 1.1rem);
   /* border-radius: 6px; */
-}
-
-.custom-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* left icon | center text | right logo */
-  align-items: center;
-  background-color: #FBBB2C; /* Yellow-orange background */
-  color: #393939;
-  padding: 0rem;
-  /* border-radius: 12px 12px 0 0; */
-  height: clamp(70px, 10vw, 100px); /*responsive header height */
-  position: relative;
-}
-
-/* Left (Heart Icon) */
-.left-section {
-  display: flex;
-  align-items: center;
-  justify-self: right;
-}
-.left-section .icon {
-  height: clamp(2.5rem, 20vw, 4.5rem);
-  width: auto;
-  max-height: 100%;
-  padding: clamp(0.5rem, 2vw, 1rem);
-  object-fit: contain;
-}
-
-/* Center (Text) */
-.center-section {
-  /* center perfectly within the yellow middle column */
-  position: static;
-  transform: none;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: right;
-  gap: 0.1rem;
-}
-
-.title {
-  font-size: clamp(0.9rem, 2.2vw, 1.4rem);
-  font-weight: 700;
-}
-
-.subtitle {
-  font-size: clamp(0.7rem, 1.8vw, 1.1rem);
-  margin-top: 0.1rem;
-  /* color: #333; */
-}
-
-/* Ensure perfect centering on very small phones */
-@media (max-width: 500px) {
-  .custom-header {
-    grid-template-columns: minmax(40px, 18%) 1fr minmax(40px, 18%);
-  }
-  .left-section .icon {
-    height: clamp(3.9rem, 14vw, 3.6rem);
-  }
-}
-
-/* Right (RI SVG) */
-.right-section {
-  height: clamp(70px, 10vw, 100px);
-  background-color: #5785C3;
-  /* width:120px;Blue box background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.5rem;
-  justify-self: end;
-}
-
-.ri-logo {
-  display: block;
-  height: auto;
-  max-height: 100%;
-  width: auto;
-  max-width: 100%;
-  padding: 1rem;
-}
-
-#flipbook {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: 100%;
-}
-
-.page p {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  line-height: 1.2;
-  margin: 0rem 0;
-  color: #393939;
-}
-.page h1,
-.page h2 {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  /* line-height: 1; */
-  margin: 0.2rem 0;
-  margin-top: 0.3vh;
-  display: flex;
-  align-items: center;
-  color: #393939;
-}
-.lable {
-  display: flex;
-  /* align-items:left; */
-  /* margin-left: 0px; */
-  color: #393939;
-  font-size: clamp(0.6rem, 2.5vw, 1.2rem);
-}
-@media (max-width: 500px) {
-  .main-container {
-    max-width: 100%;
-    border-radius: 0;
-    padding: 0rem;
-    /* margin-top: 2rem; */
-    height: clamp(80svh, var(--app-90vh), 100svh);
-    min-height: clamp(80svh, var(--app-90vh), 100svh);
-    max-height: 100svh;
-    margin-block: 0 clamp(8px, 2svh, 24px);
-  }
-
-  header,
-  footer {
-    font-size: 1rem;
-    padding: 0rem;
-  }
-
-  html,
-  body {
-    overflow: hidden;
-  }
-  #flipbook {
-    aspect-ratio: auto;
-    height: 100%;
-  }
-  .page {
-    height: 100%;
-  }
-  .page-content {
-    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
-  }
-
-  .page p {
-    font-size: clamp(0vh, 2.5vw, 1.2rem);
-    margin-top: -0.2rem;
-  }
-  .page h1,
-  .page h2 {
-    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
-    display: flex;
-    line-height: 1;
-    align-items: center;
-  }
-  span {
-    font-size: 2vh;
-    margin-top: -0.3vh;
-    color: #5785C3;
-  }
-}
-
-@media (max-width: 375px) {
-  .main-container {
-    max-width: 100%;
-    margin-top: 0rem;
-    border-radius: 0;
-    padding: 0rem;
-    /* margin-block: var(--outer-gap); */
-    height: clamp(80svh, var(--app-90vh), 100svh);
-    min-height: clamp(80svh, var(--app-90vh), 100svh);
-    max-height: 100svh;
-    margin-block: 0 clamp(8px, 2svh, 24px);
-  }
-
-  header,
-  footer {
-    /* font-size: 0.95rem; */
-    font-size: clamp(0rem, 3.5vw, 1.2rem);
-    padding: 0rem;
-  }
-
-  .page p {
-    font-size: clamp(0.6rem, 0vw, 1rem);
-    margin-top: -0.2rem;
-  }
-  .page h1 {
-    font-size: clamp(0.85rem, 4vw, 1rem);
-  }
-  .page h2 {
-    font-size: clamp(0.6rem, 1.5vw, 1rem);
-    display: flex;
-    line-height: 1;
-    align-items: center;
-  }
-  html,
-  body {
-    overflow: hidden;
-  }
-  #flipbook {
-    aspect-ratio: auto;
-    height: 100%;
-  }
-  .page {
-    height: 100%;
-  }
-  .page-content {
-    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
-  }
-  h2 span {
-    font-size: 2.5vh;
-    margin-top: -0.8vh;
-    color: #5785C3;
-  }
-}
-
-@media (max-width: 320px) {
-  .main-container {
-    max-width: 100%;
-    margin-top: 0rem;
-    border-radius: 0;
-    padding: 0rem;
-    margin-block: 0 clamp(8px, 2svh, 24px);
-    height: clamp(80svh, var(--app-90vh), 100svh);
-    min-height: clamp(80svh, var(--app-90vh), 100svh);
-    max-height: 100svh;
-  }
-
-  header,
-  footer {
-    /* font-size: 0.95rem; */
-    font-size: clamp(0rem, 3.5vw, 1.2rem);
-    padding: 0rem;
-  }
-
-  .page p {
-    font-size: clamp(0.6rem, 0vw, 1rem);
-    margin-top: -0.2rem;
-  }
-  .page h1 {
-    font-size: clamp(0.85rem, 4vw, 1rem);
-  }
-  .page h2 {
-    font-size: clamp(0.5rem, 1.5vw, 1rem);
-    display: flex;
-    line-height: 1.5;
-    align-items: center;
-  }
-  html,
-  body {
-    overflow: hidden;
-  }
-  #flipbook {
-    aspect-ratio: auto;
-    height: 100%;
-  }
-  .page {
-    height: 100%;
-  }
-  .page-content {
-    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
-  }
-  h2 span {
-    font-size: 2.5vh;
-    margin-top: -0.8vh;
-    color: #5785C3;
-  }
-}
-
-/* Fix layout for Galaxy S8, S20 Ultra (portrait) */
-@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3) {
-  .main-container {
-    height: auto; /* let it grow instead of being fixed at 80vh */
-    margin-block: 1rem;
-    padding: 0.5rem;
-  }
-
-  #flipbook {
-    aspect-ratio: auto; /* allow automatic height */
-    height: auto;
-  }
-
-  .page {
-    height: auto;
-    padding: 1rem 0.5rem;
-  }
-
-  img.responsive-image {
-    width: 100%; /* scale to container width properly */
-    height: auto;
-    max-height: 80vh;
-  }
-  h2 span {
-    font-size: 2.5vh;
-    margin-top: -0.8vh;
-    color: #5785C3;
-  }
-}
-
-/* @media only screen and (max-width: 430px) and (min-device-width: 320px) {
-  
-  .page img.responsive-image {
-    width: 110%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .main-container {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 80vh;
-    overflow: hidden;
- }
-
-  #flipbook {
-    width: 100vw !important;
-    height: auto;
-  }
-
-  body, html {
-    overflow-x: hidden;
-  }
-} */
-
-/* Responsive footer number box */
-@media (min-width: 1400px) {
-  .footer-number-box {
-    font-size: 1.2rem !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1399px) {
-  .footer-number-box {
-    font-size: 1.2rem !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer-number-box {
-    font-size: 1.2rem !important;
-  }
-}
-
-@media (max-width: 499px) {
-  .footer-number-box {
-    font-size: 1.1rem !important;
-  }
-}
-
-@media (max-width: 319px) {
-  .footer-number-box {
-    padding: 0.5rem 0.7rem !important;
-    font-size: 1rem !important;
-  }
-}
-
-
- #flipbook .turn-page {
-        background-color: #fff;
-        background-size: 100% 100%;
-      }
-
-
-
-.span2{
-  padding-top: 2.5vh;
-}
-
-
-.span3{
-  padding-top: 3vh;
-}
-.span4{
-  padding-top: -2vh;
 }
