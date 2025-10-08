@@ -232,7 +232,7 @@ span{
   .container {
     width: 100vw;         /* force full viewport width */
     max-width: 100vw;
-    height: 82vh;         /* maintain proportional height */
+    height: 88vh;         /* maintain proportional height */
     aspect-ratio: auto;   /* disable 9/16 restriction */
     background: white;
     border-radius: 0;
