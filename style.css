@@ -98,7 +98,7 @@ button, input {
   align-items: center;
   justify-content: space-between;
   background-color: #FBBB2C; /* Yellow-orange */
-  height: 75px; /* Matches your image’s scale */
+  height: 60px; /* Matches your image’s scale */
   width: 100%;
   color: #393939;
   overflow: hidden;
