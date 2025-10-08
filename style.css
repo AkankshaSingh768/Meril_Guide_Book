@@ -214,7 +214,7 @@ span{
 @media (max-width: 500px) {
   .container {
     width: 100vw;        /* force full viewport width */
-    max-width: 100vw;    
+    max-width: 110vw;    
     height: 85vh;         /* keep good visible height */
     aspect-ratio: auto;   /* disable aspect ratio restriction */
     border-radius: 0;
