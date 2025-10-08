@@ -36,7 +36,7 @@ html, body {
   padding: 0;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content: center;
 }
 
@@ -209,4 +209,12 @@ span{
 }
 .span1 {
   padding-top: 1vh;
+}
+@media(max-width:500px){
+  .container{
+    max-height: 85vh;
+    display: flex;
+  align-items:stretch;
+  justify-content: center;
+  }
 }
