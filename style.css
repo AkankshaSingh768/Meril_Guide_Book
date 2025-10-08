@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 html, body {
@@ -210,24 +209,4 @@ span{
 }
 .span1 {
   padding-top: 1vh;
-}
-/* --- MOBILE FIX --- */
-@media (max-width: 600px) {
-  .container {
-    width: 100vw;        /* force full viewport width */
-    max-width: 110vw;    
-    height: 85vh;         /* keep good visible height */
-    aspect-ratio: auto;   /* disable aspect ratio restriction */
-    border-radius: 0;
-  }
-
-  #flipbook {
-    width: 100%;
-    height: 100%;
-  }
-
-  .page-controls {
-    gap: 4px;
-    margin-top: 6px;
-  }
 }
