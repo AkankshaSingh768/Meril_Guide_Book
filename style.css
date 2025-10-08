@@ -15,6 +15,7 @@ html, body {
 /* Outer parent centers the container on screen */
 .container-parent {
   width: 100%;
+  max-width: 100%;
   height: auto; /* let it adapt naturally */
   display: flex;
   flex-direction: column; /* stack flipbook + controls vertically */
