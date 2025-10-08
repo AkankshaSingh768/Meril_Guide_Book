@@ -210,9 +210,3 @@ span{
 .span1 {
   padding-top: 1vh;
 }
-@media(max-width:500px){
-  .container{
-    max-height: 85vh;
-    max-width: 100vw;
-  }
-}
