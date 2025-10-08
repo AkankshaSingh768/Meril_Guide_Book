@@ -178,3 +178,8 @@ button, input {
   font-size: clamp(1rem, 1.5vw, 1.1rem);
   /* border-radius: 6px; */
 }
+span{
+  color:#5785C3;
+  font-size: 3vh;
+  margin-top: -1.5vh;
+}
