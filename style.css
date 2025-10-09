@@ -27,8 +27,8 @@ html, body {
 .container {
   position: relative;
   width: 100%;
-  min-height: 80vh;
   max-height: 90vh; /* responsive height limit */
+  max-width: 100%;
   aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
   background: white;
   border-radius: 0;
@@ -211,12 +211,28 @@ span{
 .span1 {
   padding-top: 1vh;
 }
-@media(max-width:500px){
-  .container{
-    max-height: 85vh;
-
-    display: flex;
-  align-items:stretch;
-  justify-content: center;
-  }
+/* iPhone (all models) — set container height to 80vh */
+/* iPhone (all models) — set container height to 80vh */
+/* Reliable 90vh variable: prefer 90dvh, fall back to 90svh */
+/* :root {
+  --app-90vh: 90svh;
 }
+@supports (height: 90dvh) {
+  :root {
+    --app-90vh: 90dvh;
+  }
+} */
+
+/* iPhone (all models) — set container height using svh/dvh */
+/* @supports (-webkit-touch-callout: none) {
+
+  .container {
+    max-height: 85svh !important;
+    display: flex;
+    align-items: stretch;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: clamp(80svh, var(--app-90vh), 100svh);
+    min-height: clamp(80svh, var(--app-90vh), 100svh);
+  }
+} */
