@@ -3,7 +3,6 @@ $(document).ready(function () {
 
   const coverPages = [1, 2, 3, 4, 31, 47, 71, 97, 120, 145, 151, 152]; // internal + outer covers
 
-  // Section definitions with subtitles and optional icons
   const sections = [
     {
       start: 4,
@@ -97,7 +96,7 @@ $(document).ready(function () {
     }
   ];
 
-  // Function to get section title, subtitle, and icon based on page number
+  // Generate header dynamically
   function getHeaderForPage(pageNumber) {
     let currentSection = sections[0];
 
@@ -124,7 +123,6 @@ $(document).ready(function () {
     return createHeader(currentSection.title, currentSubtitle, currentIcon);
   }
 
-  // Header generator with dynamic title, subtitle, and icon
   function createHeader(title = "Default Title", subtitle = "Generic", icon = "../icons/default.png") {
     return `
       <header class="custom-header">
@@ -144,6 +142,7 @@ $(document).ready(function () {
 
   let visualPageNumber = 1;
 
+  // 🔹 Load pages dynamically
   for (let i = 1; i <= totalPages; i++) {
     const isCover = coverPages.includes(i);
     const fileName = isCover ? `cover${i}.html` : `page${i}.html`;
@@ -162,23 +161,7 @@ $(document).ready(function () {
     visualPageNumber++;
   }
 
-
-  // $("#flipbook").turn({
-  //   width: '100%',
-  //   height: '100%',
-  //   autoCenter: true,
-  //   display: $(window).width() < 1024 ? "single" : "double",
-  //   duration: 1000,
-  //   acceleration: true
-  // });
-  
-  // // Update on window resize
-  // $(window).on("resize", function() {
-  //   $("#flipbook").turn("display", $(window).width() < 1024 ? "single" : "double");
-  // });
-  
-
-  // Initialize flipbook
+  // 🔹 Initialize Flipbook
   $('#flipbook').turn({
     width: '100%',
     height: '100%',
@@ -188,22 +171,16 @@ $(document).ready(function () {
     acceleration: true,
     gradient: true,
     elevation: 100,
-     pages: 150, // total pages
-    cornerSize: 0 // corners disabled
-    
+    pages: 150,
+    cornerSize: 0
   });
-  
-// Disable page-flip on simple click/tap
-$("#flipbook").bind('click', function(e){
+
+  // Disable default click page-turn
+  $("#flipbook").bind('click', function (e) {
     e.preventDefault();
-});
+  });
 
-  // Optional: Initialize TTS if defined
-  if (typeof initializeTTS === "function") {
-    initializeTTS();
-  }
-
-  // Keyboard Navigation
+  // 🔹 Keyboard Navigation
   $(document).on('keydown', function (e) {
     if (e.key === 'ArrowLeft') {
       $('#flipbook').turn('previous');
@@ -211,4 +188,43 @@ $("#flipbook").bind('click', function(e){
       $('#flipbook').turn('next');
     }
   });
+
+  // Optional: Initialize TTS if defined
+  if (typeof initializeTTS === "function") {
+    initializeTTS();
+  }
+
+  /* ==============================
+     🌟 INTERSECTION OBSERVER
+     ============================== */
+  // Wait a bit for pages to load
+  setTimeout(() => {
+    const pages = document.querySelectorAll('.page');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const page = entry.target;
+        if (entry.isIntersecting) {
+          // 👇 Triggered when the page becomes visible
+          page.classList.add('visible');
+
+          // Example: lazy load images
+          page.querySelectorAll('img[data-src]').forEach(img => {
+            if (!img.src) img.src = img.dataset.src;
+          });
+
+          // Optional: log visible page number
+          console.log(`${page.id} is now visible`);
+        } else {
+          page.classList.remove('visible');
+        }
+      });
+    }, {
+      root: document.querySelector('#flipbook'),
+      threshold: 0.5 // Trigger when 50% of page is visible
+    });
+
+    // Observe all pages
+    pages.forEach(page => observer.observe(page));
+  }, 1500); // give time for dynamic pages to load
 });
