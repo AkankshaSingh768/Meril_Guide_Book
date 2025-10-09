@@ -200,19 +200,6 @@ span {
   align-items: center;
   justify-content: flex-start;
   overflow: visible; /* allow buttons to show fully */
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  max-height: 85vh; /* responsive height limit */ /* min-height:vh; */
-  aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
-  background: white;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   }
 
   header,
