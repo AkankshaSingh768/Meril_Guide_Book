@@ -133,7 +133,6 @@ input {
 }
 .page h2 {
   font-size: 1.3vh;
-  line-height: 1;
   display: inline-flex;
 }
 .page-content {
