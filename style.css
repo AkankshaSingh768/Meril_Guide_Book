@@ -127,9 +127,9 @@ input {
   object-fit: contain;
 }
 .page p {
-  margin-bottom: 0.1vh; /* remove extra bottom space of <p> */
+  margin-bottom: -0.5vh; /* remove extra bottom space of <p> */
   font-size: 1.2vh;
-  line-height: 1.3;
+ 
 }
 .page h2 {
   margin-top: 0.2vh; /* reduce or remove top space */
