@@ -138,7 +138,7 @@ input {
   display: inline-flex;
 }
 .page-content {
-  padding: 1rem;
+  padding: 0.8rem;
 } /* Yellow footer bar at bottom */
 .page-footer-bar {
   position: absolute;
