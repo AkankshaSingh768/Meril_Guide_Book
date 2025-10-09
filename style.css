@@ -127,11 +127,11 @@ input {
   object-fit: contain;
 }
 .page p {
-  font-size: 1.2vh;
+  font-size: 1.1vh;
   margin-top: -0.4vh;
 }
 .page h2 {
-  font-size: 1.3vh;
+  font-size: 1.2vh;
   display: inline-flex;
 }
 .page-content {
