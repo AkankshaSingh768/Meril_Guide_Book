@@ -75,7 +75,7 @@ input {
   align-items: center;
   justify-content: space-between;
   background-color: #fbbb2c; /* Yellow-orange */
-  height: 60px; /* Matches your image’s scale */
+  height: 66px; /* Matches your image’s scale */
   width: 100%;
   color: #393939;
   overflow: hidden;
@@ -141,7 +141,7 @@ input {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* background-color: #F4B42A; */
+  height: 66px; /* background-color: #F4B42A; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
