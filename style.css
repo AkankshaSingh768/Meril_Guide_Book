@@ -23,7 +23,7 @@ body {
    position: relative;
   width: 100%;
   max-width: 100%;
-  max-height: 90vh; /* responsive height limit */ /* min-height:vh; */
+  max-height: 87vh; /* responsive height limit */ /* min-height:vh; */
   aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
   background: gray;
   border-radius: 0;
