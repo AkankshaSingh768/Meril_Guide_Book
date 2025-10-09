@@ -128,6 +128,7 @@ input {
 }
 .page p {
   font-size: 1.2vh;
+  margin-top: -0.4vh;
 }
 .page h2 {
   font-size: 1.3vh;
