@@ -164,3 +164,25 @@ span {
 .span1 {
   padding-top: 1vh;
 }
+
+/* iPhone and small mobile screens (portrait) */
+@supports (-webkit-touch-callout: none) {
+  .container {
+    max-height: 80vh !important;
+  }
+}
+
+/* Tablets (landscape and portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-height: 85vh; /* slightly smaller height for tablets */
+  }
+}
+
+/* Large screens (desktops/laptops) */
+@media (min-width: 1025px) {
+  .container {
+    max-height: 90vh;
+  }
+}
+
