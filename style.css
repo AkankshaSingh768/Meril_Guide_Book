@@ -8,7 +8,7 @@ html,
 body {
   height: 100%;
   font-family: "Carlito", Arial, sans-serif;
-  background: #eee;
+  background:gray;
   overflow: hidden;
 } /* Outer parent centers the container on screen */
 .container-parent {
@@ -20,14 +20,12 @@ body {
   align-items: center;
   justify-content: flex-start;
   overflow: visible; /* allow buttons to show fully */
-} /* Make container fill the parent completely for cover pages */
-.container {
-  position: relative;
+   position: relative;
   width: 100%;
   max-width: 100%;
-  max-height: 85vh; /* responsive height limit */ /* min-height:vh; */
+  max-height: 87vh; /* responsive height limit */ /* min-height:vh; */
   aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
-  background: white;
+  background: gray;
   border-radius: 0;
   box-shadow: none;
   padding: 0;
@@ -35,7 +33,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-} /* Make cover page image fit perfectly */
+} /* Make container fill the parent completely for cover pages */
+/* Make cover page image fit perfectly */
 .responsive-image {
   width: 100%;
   height: 100%;
@@ -76,7 +75,7 @@ input {
   align-items: center;
   justify-content: space-between;
   background-color: #fbbb2c; /* Yellow-orange */
-  height: 60px; /* Matches your image’s scale */
+  height: 66px; /* Matches your image’s scale */
   width: 100%;
   color: #393939;
   overflow: hidden;
@@ -142,7 +141,7 @@ input {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* background-color: #F4B42A; */
+  height: 66px; /* background-color: #F4B42A; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -158,8 +157,8 @@ input {
 }
 span {
   color: #5785c3;
-  font-size: 3vh;
-  margin-top: -1.5vh;
+  font-size: 2.5vh;
+  margin-top: -1.2vh;
 }
 .span1 {
   padding-top: 1vh;
