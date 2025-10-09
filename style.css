@@ -108,9 +108,11 @@ input {
 }
 .title {
   font-size: 1.5vh;
+  color: #393939;
 }
 .subtitle {
   font-size: 1.2vh;
+  color: #393939;
 } /* Right Section (RI Logo Box) */
 .right-section {
   display: flex;
@@ -129,6 +131,7 @@ input {
 .page p {
   margin-bottom: -0.5vh; /* remove extra bottom space of <p> */
   font-size: 1.2vh;
+  color: #393939;
  
 }
 .page h2 {
@@ -136,6 +139,7 @@ input {
   margin-bottom: 0;  /* optional, removes bottom gap */
   font-size: 1.3vh;
   display: inline-flex;
+  color: #393939;
 }
 .page-content {
   padding: 0.8rem;
