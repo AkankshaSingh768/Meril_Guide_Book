@@ -8,7 +8,7 @@ html,
 body {
   height: 100%;
   font-family: "Carlito", Arial, sans-serif;
-  background: #eee;
+  background:gray;
   overflow: hidden;
 } /* Outer parent centers the container on screen */
 .container-parent {
@@ -25,7 +25,7 @@ body {
   max-width: 100%;
   max-height: 90vh; /* responsive height limit */ /* min-height:vh; */
   aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
-  background: white;
+  background: gray;
   border-radius: 0;
   box-shadow: none;
   padding: 0;
