@@ -127,14 +127,18 @@ input {
   object-fit: contain;
 }
 .page p {
+  margin-bottom: -0.5vh; /* remove extra bottom space of <p> */
   font-size: 1.2vh;
+ 
 }
 .page h2 {
+  margin-top: 0.2vh; /* reduce or remove top space */
+  margin-bottom: 0;  /* optional, removes bottom gap */
   font-size: 1.3vh;
   display: inline-flex;
 }
 .page-content {
-  padding: 1rem;
+  padding: 0.8rem;
 } /* Yellow footer bar at bottom */
 .page-footer-bar {
   position: absolute;
@@ -161,5 +165,11 @@ span {
   margin-top: -1.2vh;
 }
 .span1 {
-  padding-top: 1vh;
+  padding-top: 1.5vh;
+}
+.span2 {
+  padding-top: 2vh;
+}
+.span3 {
+  padding-top: 2.5vh;
 }
