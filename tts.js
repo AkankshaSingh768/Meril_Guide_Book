@@ -2856,6 +2856,15 @@ const processedGroups = new WeakSet();
         "Variable Angle Plates",
         "Weight Bearing",
         "Wound Closure",
+        "Intra-Aortic Balloon Pump (IABP)",
+        "Dual-Antiplatelet Therapy (DAPT)",
+        "Dual-Lumen Catheter",
+        "Catheter-Based Therapy",
+        "Non-Compliant Balloon",
+        "Over-the-Wire (OTW) System",
+        "Post-Dilatation",
+        "Pre-Dilatation",
+        "Semi-Compliant Balloon"
       ];
      
 
