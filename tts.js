@@ -2888,8 +2888,8 @@ const processedGroups = new WeakSet();
        "Lichtenstein Hernia Repair",
        "Non-absorbable Mesh",
        "Mypectineal Orifice",
-       "Shouldice Techique",
-       "Albumin-Glutaraldegyde",
+       "Shouldice Technique",
+       "Albumin-Glutaraldehyde",
        "Cryo-adhesive",
        "Skin Graft",
        "Cross-reactivity",
@@ -2914,7 +2914,22 @@ const processedGroups = new WeakSet();
       "Balloon-Based Procedure",
       "Balloon-Related Complications",
       "Double-Lumen Tube",
-      
+      "Balloon Aortic Valvuloplasty (BAV)",
+      "Balloon-Expandable Valve",
+      "Ceramic-on-Ceramic",
+      "Cross-Linked Polyethylene",
+      "Left Atrium",
+      "Left Ventricle",
+      "Radioopaque",
+      "Sublay Repair",
+      "TachoComb",
+      "Women's Health",
+      "Cassette",
+      "PH",
+      "Pipette",
+      "Tube Placement Confirmation",
+      "Anti-Glide Plate"
+
       
       ];
      
