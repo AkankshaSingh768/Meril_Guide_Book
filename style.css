@@ -4,28 +4,37 @@
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   height: 100%;
   font-family: "Carlito", Arial, sans-serif;
-  background:gray;
+  background: gray;
   overflow: hidden;
-} /* Outer parent centers the container on screen */
+}
+
+/* Outer parent centers the container on screen */
 .container-parent {
   width: 100%;
   max-width: 100%;
-  height: auto; /* let it adapt naturally */
+  height: auto;
+  /* let it adapt naturally */
   display: flex;
-  flex-direction: column; /* stack flipbook + controls vertically */
+  flex-direction: column;
+  /* stack flipbook + controls vertically */
   align-items: center;
   justify-content: flex-start;
-  overflow: visible; /* allow buttons to show fully */
-   position: relative;
+  overflow: visible;
+  /* allow buttons to show fully */
+  position: relative;
   width: 100%;
   max-width: 100%;
-  max-height: 87vh; /* responsive height limit */ /* min-height:vh; */
-  aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
-  background:gray;
+  max-height: 87vh;
+  /* responsive height limit */
+  /* min-height:vh; */
+  aspect-ratio: 9 / 16;
+  /* maintain your flipbook ratio */
+  background: gray;
   border-radius: 0;
   box-shadow: none;
   padding: 0;
@@ -33,27 +42,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-} /* Make container fill the parent completely for cover pages */
+}
+
+/* Make container fill the parent completely for cover pages */
 /* Make cover page image fit perfectly */
 .responsive-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-} /* Flipbook takes full size of container */
+}
+
+/* Flipbook takes full size of container */
 #flipbook {
   width: 100%;
   height: 100%;
   display: block;
-} /* For turn.js page background */
+}
+
+/* For turn.js page background */
 #flipbook .turn-page {
   background-color: #fff;
   background-size: 100% 100%;
-} /* Images or page content inside flipbook stay within aspect ratio */ /* #flipbook img { width: 100%; height: 100%; object-fit: contain; display: block; } */ /* Responsive page number box, buttons, etc. */
+}
+
+/* Images or page content inside flipbook stay within aspect ratio */
+/* #flipbook img { width: 100%; height: 100%; object-fit: contain; display: block; } */
+/* Responsive page number box, buttons, etc. */
 button,
 input {
   font-family: "Carlito", Arial, sans-serif;
-} /* Adjust navigation section spacing */
+}
+
+/* Adjust navigation section spacing */
 .page-controls {
   width: 100%;
   display: flex;
@@ -61,36 +82,48 @@ input {
   align-items: center;
   gap: 6px;
   margin-top: 10px;
-  flex-wrap: wrap; /* ensures good layout on small screens */
+  flex-wrap: wrap;
+  /* ensures good layout on small screens */
   padding-bottom: 10px;
 }
+
 .page-controls button,
 .page-controls input {
   font-size: clamp(0.8rem, 2.5vw, 1rem);
   padding: 0.2rem 0.4rem;
-} /* Header Layout */
+}
+
+/* Header Layout */
 .custom-header {
   display: grid;
-  grid-template-columns: auto 1fr auto; /* Left | Center | Right */
+  grid-template-columns: auto 1fr auto;
+  /* Left | Center | Right */
   align-items: center;
   justify-content: space-between;
-  background-color: #fbbb2c; /* Yellow-orange */
-  height: 66px; /* Matches your image’s scale */
+  background-color: #fbbb2c;
+  /* Yellow-orange */
+  height: 66px;
+  /* Matches your image’s scale */
   width: 100%;
   color: #393939;
   overflow: hidden;
-} /* Left Section (Stomach Icon) */
+}
+
+/* Left Section (Stomach Icon) */
 .left-section {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 1rem;
 }
+
 .left-section .icon {
   height: 42px;
   width: auto;
   object-fit: contain;
-} /* Center Section (Title Text) */
+}
+
+/* Center Section (Title Text) */
 .center-section {
   text-align: center;
   display: flex;
@@ -99,83 +132,111 @@ input {
   font-weight: 600;
   line-height: 1.2;
 }
+
 .center-section h1 {
   font-size: 0.7rem;
 }
+
 .center-section p {
   font-size: 0.75rem;
   font-weight: 400;
 }
+
 .title {
   font-size: 1.8vh;
   color: #393939;
 }
+
 .subtitle {
   font-size: 1.5vh;
   color: #393939;
-} /* Right Section (RI Logo Box) */
+}
+
+/* Right Section (RI Logo Box) */
 .right-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #5785c3; /* Blue box */
+  background-color: #5785c3;
+  /* Blue box */
   width: auto;
   height: 100%;
   padding: 0 0.8rem;
 }
+
 .ri-logo {
   height: 42px;
   width: auto;
   object-fit: contain;
 }
-.page p {
-  margin-bottom: -0.5vh; /* remove extra bottom space of <p> */
-  font-size: 1.2vh;
-  color: #393939;
- 
+
+.capital::first-letter {
+  color: #5785c3;
+  font-size: 2.5vh;
 }
-.page h2 {
-  margin-top: 0.2vh; /* reduce or remove top space */
-  margin-bottom: 0;  /* optional, removes bottom gap */
+
+h2 {
+  margin-top: 0.2vh;
+  margin-bottom: 0;
   font-size: 1.3vh;
-  display: inline-flex;
+  display: inline-block;
   color: #393939;
+  line-height: 10px;
 }
+
 .page-content {
   padding: 0.8rem;
-} /* Yellow footer bar at bottom */
+}
+
+.page p {
+  margin-bottom: -0.5vh;
+  /* remove extra bottom space of <p> */
+  font-size: 1.2vh;
+  color: #393939;
+}
+
+/* Yellow footer bar at bottom */
 .page-footer-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 66px; /* background-color: #F4B42A; */
+  height: 66px;
+  /* background-color: #F4B42A; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 0rem; /* border-radius: 0 0 12px 12px; */
+  padding: 0 0rem;
+  /* border-radius: 0 0 12px 12px; */
   box-sizing: border-box;
-} /* Page number inside yellow bar */
+}
+
+/* Page number inside yellow bar */
 .footer-number-box {
   background-color: #fbbb2c;
-  color: #393939; /* margin-right: 1rem; */
+  color: #393939;
+  /* margin-right: 1rem; */
   margin-top: 1rem;
-  padding: 1.1rem 2rem; /* font-weight: bold; */
-  font-size: clamp(1rem, 1.5vw, 1.1rem); /* border-radius: 6px; */
+  padding: 1.1rem 2rem;
+  /* font-weight: bold; */
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  /* border-radius: 6px; */
 }
+
 span {
   color: #5785c3;
   font-size: 2.5vh;
   margin-top: -1.2vh;
 }
+
 .span1 {
   padding-top: 1.5vh;
 }
+
 .span2 {
   padding-top: 2vh;
 }
+
 .span3 {
   padding-top: 2.5vh;
 }
-
-
