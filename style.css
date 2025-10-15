@@ -25,7 +25,7 @@ body {
   max-width: 100%;
   max-height: 87vh; /* responsive height limit */ /* min-height:vh; */
   aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
-  background: gray;
+  background:gray;
   border-radius: 0;
   box-shadow: none;
   padding: 0;
@@ -107,11 +107,11 @@ input {
   font-weight: 400;
 }
 .title {
-  font-size: 1.5vh;
+  font-size: 1.8vh;
   color: #393939;
 }
 .subtitle {
-  font-size: 1.2vh;
+  font-size: 1.7vh;
   color: #393939;
 } /* Right Section (RI Logo Box) */
 .right-section {
