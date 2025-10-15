@@ -2910,6 +2910,11 @@ const processedGroups = new WeakSet();
       "Tube Placement Confirmation",
       "Ventilator-Associated Pneumonia (VAP)",
       "Ventilator-Associated Event (VAE)",
+      "Balloon-Assisted Sinuostomy",
+      "Balloon-Based Procedure",
+      "Balloon-Related Complications",
+      "Double-Lumen Tube",
+      
       
       ];
      

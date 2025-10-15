@@ -136,7 +136,7 @@ $(document).ready(function () {
           <div class="subtitle">${subtitle}</div>
         </div>
         <div class="right-section">
-          <img src="images/RI.svg" alt="RI Logo" class="ri-logo" />
+          <img src="../pageImages/ri.png" alt="RI Logo" class="ri-logo" />
         </div>
       </header>
     `;
