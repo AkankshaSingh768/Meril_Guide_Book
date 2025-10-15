@@ -1,302 +1,181 @@
+/* Basic reset */
 * {
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
   margin: 0;
-  font-family: sans-serif;
-  background-color: grey;
-  overflow: hidden;
-  overflow-x: hidden;
+  padding: 0;
 }
-/* #flipbook .page {
-  background-color: white;
-  overflow: hidden;
-}
-
-#flipbook {
-  width: 900px;
-   /* width: 100%; */
-  /* aspect-ratio: 16 / 9; */
-  /* height: 600px; */
-  /* z-index: 10; */
-  /* background-color: white; */
-/* } */ 
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-  height: 80vh;
-  max-width: 900px;
-  margin-inline: auto;
-  margin-block: clamp(0rem,0vh, 2rem); 
-  padding: 1rem;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  /* border-radius: 12px; */
-}
-
-.page {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+html,
+body {
   height: 100%;
-  background-color: white;
+  font-family: "Carlito", Arial, sans-serif;
+  background:gray;
   overflow: hidden;
-}
+} /* Outer parent centers the container on screen */
+.container-parent {
+  width: 100%;
+  max-width: 100%;
+  height: auto; /* let it adapt naturally */
+  display: flex;
+  flex-direction: column; /* stack flipbook + controls vertically */
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible; /* allow buttons to show fully */
+   position: relative;
+  width: 100%;
+  max-width: 100%;
+  max-height: 87vh; /* responsive height limit */ /* min-height:vh; */
+  aspect-ratio: 9 / 16; /* maintain your flipbook ratio */
+  background: gray;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} /* Make container fill the parent completely for cover pages */
+/* Make cover page image fit perfectly */
 .responsive-image {
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  /* object-fit: contain; */
-  display: block; 
+  height: 100%;
+  object-fit: cover;
+  display: block;
+} /* Flipbook takes full size of container */
+#flipbook {
+  width: 100%;
+  height: 100%;
+  display: block;
+} /* For turn.js page background */
+#flipbook .turn-page {
+  background-color: #fff;
+  background-size: 100% 100%;
+} /* Images or page content inside flipbook stay within aspect ratio */ /* #flipbook img { width: 100%; height: 100%; object-fit: contain; display: block; } */ /* Responsive page number box, buttons, etc. */
+button,
+input {
+  font-family: "Carlito", Arial, sans-serif;
+} /* Adjust navigation section spacing */
+.page-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap; /* ensures good layout on small screens */
+  padding-bottom: 10px;
 }
-img.responsive-image {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  /* object-fit: contain; */
+.page-controls button,
+.page-controls input {
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  padding: 0.2rem 0.4rem;
+} /* Header Layout */
+.custom-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Left | Center | Right */
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fbbb2c; /* Yellow-orange */
+  height: 66px; /* Matches your image’s scale */
+  width: 100%;
+  color: #393939;
+  overflow: hidden;
+} /* Left Section (Stomach Icon) */
+.left-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
 }
-@supports(padding: max(0px)) {
-  body {
-    padding: env(safe-area-inset);
-  }
+.left-section .icon {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+} /* Center Section (Title Text) */
+.center-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  line-height: 1.2;
 }
-
-h2 span{
-  font-size: 2vh;margin-top: -0.3vh;
-  color: #5B82B2;
+.center-section h1 {
+  font-size: 0.7rem;
 }
-
-
-/* Yellow footer bar at bottom */
+.center-section p {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.title {
+  font-size: 1.5vh;
+  color: #393939;
+}
+.subtitle {
+  font-size: 1.2vh;
+  color: #393939;
+} /* Right Section (RI Logo Box) */
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5785c3; /* Blue box */
+  width: auto;
+  height: 100%;
+  padding: 0 0.8rem;
+}
+.ri-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+.page p {
+  margin-bottom: -0.5vh; /* remove extra bottom space of <p> */
+  font-size: 1.2vh;
+  color: #393939;
+ 
+}
+.page h2 {
+  margin-top: 0.2vh; /* reduce or remove top space */
+  margin-bottom: 0;  /* optional, removes bottom gap */
+  font-size: 1.3vh;
+  display: inline-flex;
+  color: #393939;
+}
+.page-content {
+  padding: 0.8rem;
+} /* Yellow footer bar at bottom */
 .page-footer-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: clamp(2rem, 5vh, 2.5rem);
-  /* background-color: #F4B42A; */
+  height: 66px; /* background-color: #F4B42A; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 0rem;
-  /* border-radius: 0 0 12px 12px; */
+  padding: 0 0rem; /* border-radius: 0 0 12px 12px; */
   box-sizing: border-box;
-}
-.page-content {
-  padding: 1rem;
-  padding-bottom: 1rem; /* prevent text from being hidden behind footer */
-}
-
-/* Page number inside yellow bar */
+} /* Page number inside yellow bar */
 .footer-number-box {
-  background-color:#F4B42A;
-  color: #222;
-  padding: 0.8rem 1rem;
-  /* font-weight: bold; */
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
-  /* border-radius: 6px; */
+  background-color: #fbbb2c;
+  color: #393939; /* margin-right: 1rem; */
+  margin-top: 1rem;
+  padding: 1.1rem 2rem; /* font-weight: bold; */
+  font-size: clamp(1rem, 1.5vw, 1.1rem); /* border-radius: 6px; */
+}
+span {
+  color: #5785c3;
+  font-size: 2.5vh;
+  margin-top: -1.2vh;
+}
+.span1 {
+  padding-top: 1.5vh;
+}
+.span2 {
+  padding-top: 2vh;
+}
+.span3 {
+  padding-top: 2.5vh;
 }
 
-
-
-.custom-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #F4B42A; /* Yellow-orange background */
-  color: #222;
-  padding: 0rem;
-  /* border-radius: 12px 12px 0 0; */
-  height: clamp(70px, 10vw, 100px); /*responsive header height */
-}
-
-/* Left (Heart Icon) */
-.left-section .icon {
-  height: clamp(5.125rem, 8vw, 6rem);
-  width: clamp(5rem, 6vw, 5rem);
-  padding: 1rem;
-}
-
-/* Center (Text) */
-.center-section {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.title {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.subtitle {
-  font-size: 1rem;
-  margin-top: 0.2rem;
-  color: #333;
-}
-
-/* Right (RI SVG) */
-.right-section {
-  background-color: #5886C4; /* Blue box background */
-
-}
-
-.ri-logo {
-  height: clamp(4.125rem, 8vw, 6rem);  /* 50px to 96px */
-  width: clamp(4rem, 6vw, 5rem);     /* 40px to 80px */
-  padding: 1rem;
-}
-
-
-
-#flipbook {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-
-.page p{
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  line-height: 1.2;
-  margin: 0rem 0;
-}
-.page h1, .page h2 {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  /* line-height: 1; */
-  margin: 0.2rem 0;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 500px) {
-  .main-container {
-    max-width: 100%;
-    border-radius: 0;
-    padding: 0rem;
-    /* margin-top: 2rem; */
-    height:90vh;
-  }
-
-  header, footer {
-    font-size: 1rem;
-    padding: 0rem;
-  }
-
-  .page p{
-    font-size: clamp(0vh, 2.5vw, 1.2rem);
-  }
-  .page h1, .page h2 {
-    font-size: clamp(0.6rem, 4vw, 1.2rem);
-    display: flex;
-    line-height: 1.5;
-    align-items: center;
-  }
-  h2 span{
-  font-size: 2vh;margin-top: -0.3vh;
-  color: #5B82B2;
-}
-}
-
-@media (max-width: 375px) {
-  .main-container {
-    max-width: 100%;
-    margin-top: 0rem;
-    border-radius: 0;
-    padding: 0rem;
-    margin-bottom: 0.5rem;
-    height: 90vh;
-  }
-
-  header, footer {
-    /* font-size: 0.95rem; */
-    font-size: clamp(0rem, 3.5vw, 1.2rem);
-    padding: 0rem;
-  }
-
-  .page p{
-    font-size: clamp(0.5.8rem, 0vw, 1rem);
-  }
-  .page h1{
-    font-size: clamp(0.85rem, 4vw, 1rem);
-  }
-  .page h2 {
-    font-size: clamp(0.85rem, 1.5vw, 1rem);
-    display: flex;
-    line-height: 1.5;
-    align-items: center;
-  }
-  #flipbook {
-    aspect-ratio: auto;
-    height: auto;
-  }
-  h2 span{
-  font-size: 1.5vh;margin-top: -0.3vh;
-  color: #5B82B2;
-}
-}
-
-
-/* Fix layout for Galaxy S8, S20 Ultra (portrait) */
-@media only screen and (max-width: 360px) and (min-device-pixel-ratio: 3)
-       {
-  .main-container {
-    height: auto;    /* let it grow instead of being fixed at 80vh */
-    margin-block: 1rem;
-    padding: 0.5rem;
-  }
-
-  #flipbook {
-    aspect-ratio: auto;  /* allow automatic height */
-    height: auto;
-  }
-
-  .page {
-    height: auto;
-    padding: 1rem 0.5rem;
-  }
-
-  img.responsive-image {
-    width: 100%;        /* scale to container width properly */
-    height: auto;
-    max-height: 80vh;
-  }
-  h2 span{
-  font-size: 2vh;margin-top: -0.3vh;
-  color: #5B82B2;
-}
-}
-
-/* @media only screen and (max-width: 430px) and (min-device-width: 320px) {
-  
-  .page img.responsive-image {
-    width: 110%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .main-container {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 80vh;
-    overflow: hidden;
- }
-
-  #flipbook {
-    width: 100vw !important;
-    height: auto;
-  }
-
-  body, html {
-    overflow-x: hidden;
-  }
-} */
 

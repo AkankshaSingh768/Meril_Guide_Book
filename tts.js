@@ -2856,6 +2856,61 @@ const processedGroups = new WeakSet();
         "Variable Angle Plates",
         "Weight Bearing",
         "Wound Closure",
+        "Intra-Aortic Balloon Pump (IABP)",
+        "Dual-Antiplatelet Therapy (DAPT)",
+        "Dual-Lumen Catheter",
+        "Catheter-Based Therapy",
+        "Non-Compliant Balloon",
+        "Over-the-Wire (OTW) System",
+        "Post-Dilatation",
+        "Pre-Dilatation",
+        "Semi-Compliant Balloon",
+        "Inferior Vena Cava (IVC) Filter",
+        "Cross-Clamp",
+        "Graft",
+        "Off-Pump CABG",
+        "On-Pump CABG",
+        "Post-Operative Care",
+        "Valve Graft",
+        "Left Ventricular Assist Device (LVAD)",
+        "Curette",
+        "Metal-on-Metal",
+        "Press-Fit Implant",
+        "Graft Holder",
+        "Real-Time Feedback",
+        "Software Update",
+        "Wear Patterns",
+        "Patch Graft",
+        "Non-absorbable Suture",
+        "Non-absorbable Clip",
+        "Non-absorbable Stapler",
+       "Bassini Technique",
+       "Lichtenstein Hernia Repair",
+       "Non-absorbable Mesh",
+       "Mypectineal Orifice",
+       "Shouldice Techique",
+       "Albumin-Glutaraldegyde",
+       "Cryo-adhesive",
+       "Skin Graft",
+       "Cross-reactivity",
+       "Cutoff Threshold",
+       "Cut-off Value",
+       "Double-Blind Study",
+       "PCR (Polymerase Chain Reaction)",
+       "RT-PCR (Reverse Transcriptase PCR)",
+      "Post-analytical Phase",
+      "Pre-analytical Phase",
+      "QPCR (Quan ta ve PCR)",
+      "Software Interface",
+      "Auto-Stop Mechanism",
+      "Balloon-Tipped Catheter",
+      "Post-Operative Care",
+      "Post-Dilation Recovery",
+      "Post-Balloon Care",
+      "Tube Placement Confirmation",
+      "Ventilator-Associated Pneumonia (VAP)",
+      "Ventilator-Associated Event (VAE)",
+      
       ];
      
 
@@ -2927,9 +2982,9 @@ function createTTSButton(text) {
     width: "12px",
     height: "12px",
     padding: "1px",
-    color: "black",
+    color: "#393939",
   });
-
+  
   button.addEventListener("click", async (e) => {
     e.preventDefault();
     button.disabled = true;
@@ -2953,7 +3008,7 @@ function addInlineTTSButton(element, text) {
 
 // ✅ Search for target phrases inside <h3> tags
 function injectSpeakButtonsForBoldTerms(container = document) {
-  const boldElements = Array.from(container.querySelectorAll("h2"));
+  const boldElements = Array.from(container.querySelectorAll("h2,strong"));
   boldElements.forEach((el) => {
     if (processedElements.has(el)) return;
     const text = cleanText(el.textContent);

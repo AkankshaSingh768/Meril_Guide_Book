@@ -2,23 +2,103 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
     <title>My Flipbook</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./turn.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carlito&display=swap"
+      rel="stylesheet"
+    />
     <!-- Turn.js -->
   </head>
-  <body>
-    <!-- Main Wrapper Container -->
-    <div class="main-container">
+<body>
+  <!-- Responsive Centered Container -->
+  <div class="container-parent">
+    <div class="container">
+      <div id="flipbook"></div>
+
+
+    </div>
     
       <!-- Flipbook Pages Will Be Injected Here -->
-      <div id="flipbook"></div>
-    </div>
+  
+  </div>
 
-    <!-- JavaScript to load and initialize the book -->
-    <script src="tts.js"></script>
-    <script src="main.js"></script>
-  </body>
+  <!-- Navigation Buttons -->
+  <div class="page-controls">
+    <button onclick="$('#flipbook').turn('page', 1)">Start</button>
+
+    <input
+      type="number"
+      id="pageInput"
+      placeholder="Enter page no."
+      min="1"
+      style="width: 100px;"
+    />
+
+    <button onclick="goToPage()">Go</button>
+    <button onclick="$('#flipbook').turn('previous')">◀</button>
+    <button onclick="$('#flipbook').turn('next')">▶</button>
+    <button onclick="$('#flipbook').turn('page', 152)">End</button>
+  </div>
+
+  <!-- Flipbook Navigation Script -->
+  <script>
+    function goToPage() {
+      const totalPages = 152;
+      const input = document.getElementById("pageInput");
+      const pageNumber = parseInt(input.value);
+
+      if (isNaN(pageNumber)) {
+        alert("⚠️ Please enter a valid page number!");
+        return;
+      }
+
+      if (pageNumber < 1 || pageNumber > totalPages) {
+        alert(`⚠️ Page number must be between 1 and ${totalPages}.`);
+        return;
+      }
+
+      const actualPage = pageNumber + 2;
+      $("#flipbook").turn("page", actualPage);
+    }
+  </script>
+
+  <!-- Maintain 9:16 Container Ratio Dynamically -->
+  <script>
+    function resizeContainer() {
+      const container = document.querySelector('.container');
+      if (!container) return;
+
+      const aspectRatio = 9 / 16;
+      const parent = container.parentElement;
+      const maxWidth = parent.clientWidth;
+      const maxHeight = parent.clientHeight;
+      const widthByHeight = maxHeight * aspectRatio;
+      const heightByWidth = maxWidth / aspectRatio;
+
+      if (widthByHeight <= maxWidth) {
+        container.style.width = widthByHeight + 'px';
+        container.style.height = maxHeight + 'px';
+      } else {
+        container.style.width = maxWidth + 'px';
+        container.style.height = heightByWidth + 'px';
+      }
+    }
+
+    window.addEventListener('resize', resizeContainer);
+    window.addEventListener('load', resizeContainer);
+    resizeContainer();
+  </script>
+
+  <!-- Your existing logic -->
+  <script src="tts.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

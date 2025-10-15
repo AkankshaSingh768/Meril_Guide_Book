@@ -9,7 +9,7 @@ $(document).ready(function () {
       start: 4,
       title: "Vascular Intervention",
       subtitles: [
-        { start: 4, subtitle: "Generic", icon: "../icons/Icon-1.png" },
+        { start: 4, subtitle: "Generic", icon: "../icons/Icon-32.png" },
         { start: 9, subtitle: "Coronary", icon: "../icons/Icon-2.png" },
         { start: 14, subtitle: "Congenital Heart", icon: "../icons/Icon-3.png" },
         { start: 19, subtitle: "Heart Valves", icon: "../icons/Icon-4.png" }
@@ -44,8 +44,9 @@ $(document).ready(function () {
       subtitles: [
         { start: 48, subtitle: "Generic", icon: "../icons/Icon-10.png" },
         { start: 52, subtitle: "Total Knee System", icon: "../icons/Icon-11.png" },
+        { start: 57, subtitle: "Total Knee System", icon: "../icons/Icon-12.png" },
         { start: 61, subtitle: "Spine", icon: "../icons/Icon-13.png" },
-        { start: 65, subtitle: "Robotics", icon: "../icons/Icon-14.png" }
+        { start: 66, subtitle: "Robotics", icon: "../icons/Icon-14.png" }
       ]
     },
     {
@@ -161,6 +162,22 @@ $(document).ready(function () {
     visualPageNumber++;
   }
 
+
+  // $("#flipbook").turn({
+  //   width: '100%',
+  //   height: '100%',
+  //   autoCenter: true,
+  //   display: $(window).width() < 1024 ? "single" : "double",
+  //   duration: 1000,
+  //   acceleration: true
+  // });
+  
+  // // Update on window resize
+  // $(window).on("resize", function() {
+  //   $("#flipbook").turn("display", $(window).width() < 1024 ? "single" : "double");
+  // });
+  
+
   // Initialize flipbook
   $('#flipbook').turn({
     width: '100%',
@@ -168,8 +185,18 @@ $(document).ready(function () {
     autoCenter: true,
     display: 'single',
     duration: 1000,
-    acceleration: true
+    acceleration: true,
+    gradient: true,
+    elevation: 100,
+     pages: 150, // total pages
+    cornerSize: 0 // corners disabled
+    
   });
+  
+// Disable page-flip on simple click/tap
+$("#flipbook").bind('click', function(e){
+    e.preventDefault();
+});
 
   // Optional: Initialize TTS if defined
   if (typeof initializeTTS === "function") {

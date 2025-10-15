@@ -1,3 +1,218 @@
 <div class="page">
-  <img src="/images/cover3.jpg" alt="Cover Page 3" class="responsive-image" />
+  <div style="max-width: fit-content; padding: 2rem 1rem; text-align: justify">
+    <p style="font-size:2vh">
+      Welcome to
+      <b>
+        Meril’s Comprehensive Overview of Essential Terminologies (M.Guide) -
+      </b>
+      your essential reference for medical vocabulary. Designed especially for
+      Merilians, this guide offers concise, one-line descriptions to enhance
+      product knowledge. M.Guide simplifies complex concepts, connecting
+      advanced innovations to better serve the healthcare community.
+    </p>
+
+    <div style="padding-top: 2rem;">
+      <!-- Vascular Intervention -->
+      <div class="toc-item">
+        <div class="toc-icon">
+          <img src="/icons/Icon-32.png" alt="Meril Logo" />
+        </div>
+        <div class="toc-line">
+          <span class="toc-title" style="font-size: 2vh;color: #393939;">Vascular Intervention</span>
+          <span class="toc-pages" style="color: #393939;">
+            <span onclick="goToPage1(2)">2</span> -
+            <span onclick="goToPage1(28)">28</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Cardiac Surgery -->
+      <div class="toc-item">
+        <div class="toc-icon">
+          <img src="/icons/Icon-6.png" alt="Meril Logo" />
+        </div>
+        <div class="toc-line">
+          <span class="toc-title" style="font-size: 2vh;color: #393939;">Cardiac Surgery</span>
+          <span class="toc-pages" style="color: #393939;">
+            <span onclick="goToPage1(29)">29</span> -
+            <span onclick="goToPage1(44)">44</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Orthopedics -->
+      <div class="toc-item" >
+        <div class="toc-icon">
+          <img src="/icons/Icon-10.png" alt="Meril Logo" />
+        </div>
+        <div class="toc-line">
+          <span class="toc-title" style="font-size: 2vh;color: #393939;">Orthopedics</span>
+          <span class="toc-pages" style="color: #393939;">
+            <span onclick="goToPage1(45)">45</span> -
+            <span onclick="goToPage1(68)">68</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Endo-Surgery -->
+      <div class="toc-item" >
+        <div class="toc-icon">
+          <img src="/icons/Icon-16.png" alt="Meril Logo" />
+        </div>
+        <div class="toc-line">
+          <span class="toc-title" style="font-size: 2vh;color: #393939;">Endo-Surgery</span>
+          <span class="toc-pages" style="color: #393939;">
+            <span onclick="goToPage1(69)">69</span> -
+            <span onclick="goToPage1(94)">94</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Diagnostics -->
+      <div class="toc-item">
+        <div class="toc-icon">
+          <img src="/icons/Icon-33.png" alt="Meril Logo" />
+        </div>
+        <div class="toc-line">
+          <span class="toc-title" style="font-size: 2vh;color: #393939;">Diagnostics</span>
+          <span class="toc-pages" style="color: #393939;">
+            <span onclick="goToPage1(95)">95</span> -
+            <span onclick="goToPage1(117)">117</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ENT -->
+      <div class="toc-item">
+        <div class="toc-icon">
+          <img src="/icons/Icon-26.png" alt="Meril Logo" />
+        </div>
+        <div class="toc-line">
+          <span class="toc-title" style="font-size: 2vh;color: #393939;">ENT</span>
+          <span class="toc-pages" style="color: #393939;">
+            <span onclick="goToPage1(118)">118</span> -
+            <span onclick="goToPage1(142)">142</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Trauma -->
+      <div class="toc-item">
+        <div class="toc-icon">
+          <img src="/icons/Icon-31.png" alt="Meril Logo" />
+        </div>
+        <div class="toc-line">
+          <span class="toc-title" style="font-size: 2vh;color: #393939;">Trauma</span>
+          <span class="toc-pages" style="color: #393939;">
+            <span onclick="goToPage1(143)">143</span> -
+            <span onclick="goToPage1(148)">148</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+  function goToPage1(pageNumber) {
+    if (!isNaN(pageNumber)) {
+      let targetPage = pageNumber + 2;
+      $("#flipbook").turn("page", targetPage);
+    } else {
+      alert("Invalid page number!");
+    }
+  }
+</script>
+
+
+
+<style>
+  .toc-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.toc-icon {
+  display: inline-flex;
+  background-color: #5785c3;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fbbb2c;
+}
+
+.toc-icon img {
+  width: 2vh;
+  display: block;
+}
+
+.toc-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.7vh;
+  color: #393939;
+  position: relative;
+}
+
+.toc-line::before {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px dotted #5785c3;
+  margin: 0 8px;
+}
+
+.toc-title {
+  white-space: nowrap;
+}
+
+.toc-pages {
+  white-space: nowrap;
+}
+
+.toc-pages span {
+  cursor: pointer;
+  color: #393939;
+  font-size: 2vh;
+}
+.toc-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  font-size: 1.7vh;
+  color: #393939;
+}
+
+.toc-title {
+  position: relative;
+  background-color: #fff; /* keep clean under dots */
+  z-index: 2;
+  padding-right: 6px;
+}
+
+.toc-pages {
+  background-color: #fff;
+  z-index: 2;
+  padding-left: 6px;
+}
+
+.toc-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-bottom: 1px dotted #5785c3;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+
+</style>
