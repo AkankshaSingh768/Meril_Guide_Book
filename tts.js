@@ -2914,7 +2914,7 @@ const processedGroups = new WeakSet();
       "Balloon-Based Procedure",
       "Balloon-Related Complications",
       "Double-Lumen Tube",
-      "Balloon Aortic Valvuloplasty (BAV)",
+      "Balloon Aortic Valvuloplast (BAV)",
       "Balloon-Expandable Valve",
       "Ceramic-on-Ceramic",
       "Cross-Linked Polyethylene",
@@ -2928,7 +2928,27 @@ const processedGroups = new WeakSet();
       "PH",
       "Pipette",
       "Tube Placement Confirmation",
-      "Anti-Glide Plate"
+      "Anti-Glide Plate",
+      "Left Ventricular Outflow Tract (LVOT)",
+      "Valve-in-Valve Procedure",
+      "+/-Knob",
+      "Patient-Matched Valve",
+      "Post-Procedure Complications",
+      "K-Wire (Kirschner Wire)",
+      "Patella Clamp",
+      "Z-Stitch",
+      "T-shaped IUD",
+      "QPCR (Quantitative PCR)",
+      "Polyclonal Antibodies",
+      "Cricothyroidotomy",
+      "Glottis",
+      "Soft Palate",
+      "Tube Position Confirmation",
+      "Buttress Plate",
+      "Bone Cutter",
+      "K-wire (Kirschner Wire)",
+      "Plate Cutter",
+      
 
       
       ];
