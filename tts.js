@@ -2948,7 +2948,19 @@ const processedGroups = new WeakSet();
       "Bone Cutter",
       "K-wire (Kirschner Wire)",
       "Plate Cutter",
-      
+      "Posterior-Stabilized Knee",
+      "Soft Tissue Retractor",
+      "Monaxial Screw",
+      "Patient-Specific Instrumentation (PSI)",
+      "Press-Fit",
+      "keratoplasty",
+      "Lichtenstein Technique",
+      "Tension-free Repair",
+      "ISO 15189",
+      "Real-Time PCR (qPCR)",
+      "Balloon Sinusplasty",
+      "Bronchoscope",
+      "Gore-Tex Suture"
 
       
       ];
